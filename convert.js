@@ -1,6 +1,7 @@
 /*!
  * convert.js 0.0.1
  * Author: Ertuğrul Üngör
+ * Supporter: Yakup Ad
  */
 
 ;(function(root, factory) {    
