@@ -32,3 +32,20 @@ convert.DataUnits(1, "byte", "tb");
 convert.DataUnits("string", "gb", "pb");
 => false
 ```
+
+convert.Temperature(data, source, target)
+-----------------------
+
+```javascript
+convert.Temperature(1, "c", "k");
+=> 274.15
+
+convert.Temperature(1, "n", "c");
+=> 3.0303030303030303
+
+convert.Temperature(1, "f", "n");
+=> -5.68323
+
+convert.Temperature("string", "k", "f");
+=> false
+```

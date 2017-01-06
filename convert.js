@@ -220,6 +220,44 @@
         }else return false;
     };
 
+    //Temperature convert
+    function c(data, target) {
+    	target = target.toLowerCase();
+    	if(target === 'k') return data + 273.15;
+        else if (target === 'f') return 1.8 * data + 32;
+        else if (target === 'n') return data * 0.33;
+    }
+
+    function k(data, target) {
+    	target = target.toLowerCase();
+    	if(target === 'c') return data - 273.15;
+        else if (target === 'f') return 9 * data / 5 - 459.67 ;
+        else if (target === 'n') return 0.33 * (data - 273.15);
+    }
+
+    function f(data, target) {
+    	target = target.toLowerCase();
+    	if(target === 'c') return 5 * (data - 32) / 9;
+        else if (target === 'k') return 5 * (data + 459.67) / 9;
+        else if (target === 'n') return 0.18333 * (data - 32);
+    }
+
+    function n(data, target) {
+    	target = target.toLowerCase();
+    	if(target === 'c') return data / 0.33;
+        else if (target === 'k') return data / 0.33 + 273.15;
+        else if (target === 'f') return 0.18333 * (data - 32);
+    }
+
+    convert.Temperature = function(data, source, target) { 
+    	if(isNumber(data)){
+    		source = source.toLowerCase();
+    		if (source === 'c') return c(data, target);
+            else if (source === 'k') return k(data, target);
+            else if (source === 'f') return f(data, target);
+            else if (source === 'n') return n(data, target);
+    	}
+    };
 
     return convert;
 }));
