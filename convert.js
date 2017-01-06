@@ -1,6 +1,6 @@
 /*!
  * convert.js 0.0.1
- * Author: Ertuğrul Üngör
+ * Author: Ertuğrul Üngör, Yakup Ad
  * Supporter: Yakup Ad
  */
 
