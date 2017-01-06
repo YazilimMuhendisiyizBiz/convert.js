@@ -18,3 +18,17 @@ convert.metric(1, "km", "mm");
 convert.metric("string", "dam", "yard");
 => false
 ```
+
+convert.DataUnits(data, source, target)
+-----------------------
+
+```javascript
+convert.DataUnits(1, "mb", "kb");
+=> 1024
+
+convert.DataUnits(1, "byte", "tb");
+=> 9.0949470177293e-13
+
+convert.DataUnits("string", "gb", "pb");
+=> false
+```

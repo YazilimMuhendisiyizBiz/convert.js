@@ -153,5 +153,72 @@
         }else return false;
     };
 
+    //Data Unit Storage Convert
+    function byte(data, target){
+        target = target.toLowerCase();
+        if(target === 'kb') return data * 0.0009765625;
+        else if (target === 'mb') return data * 0.00000095367431640625;
+        else if (target === 'gb') return data * 0.00000000093132257461548;
+        else if (target === 'tb') return data * 0.00000000000090949470177293;
+        else if (target === 'pb') return data * 0.00000000000000088817841970013;
+    }
+
+    function kb(data, target){
+        target = target.toLowerCase();
+        if(target === 'byte') return data * 1024;
+        else if (target === 'mb') return data * 0.0009765625;
+        else if (target === 'gb') return data * 0.00000095367431640625;
+        else if (target === 'tb') return data * 0.00000000093132257461548;
+        else if (target === 'pb') return data * 0.00000000000090949470177293;
+    }
+
+    function mb(data, target){
+        target = target.toLowerCase();
+        if(target === 'byte') return data * 1048576;
+        else if (target === 'kb') return data * 1024;
+        else if (target === 'gb') return data * 0.0009765625;
+        else if (target === 'tb') return data * 0.00000095367431640625;
+        else if (target === 'pb') return data * 0.00000000093132257461548;
+    }
+
+    function gb(data, target){
+        target = target.toLowerCase();
+        if(target === 'byte') return data * 1073741824;
+        else if (target === 'kb') return data * 1048576;
+        else if (target === 'mb') return data * 1024;
+        else if (target === 'tb') return data * 0.0009765625;
+        else if (target === 'pb') return data * 0.00000095367431640625;
+    }
+
+    function tb(data, target){
+        target = target.toLowerCase();
+        if(target === 'byte') return data * 1099511627776;
+        else if (target === 'kb') return data * 1073741824;
+        else if (target === 'mb') return data * 1048576;
+        else if (target === 'gb') return data * 1024;
+        else if (target === 'pb') return data * 0.0009765625;
+    }
+
+    function pb(data, target){
+        target = target.toLowerCase();
+        if(target === 'byte') return data * 1125899906842600;
+        else if (target === 'kb') return data * 1099511627776;
+        else if (target === 'mb') return data * 1073741824;
+        else if (target === 'gb') return data * 1048576;
+        else if (target === 'tb') return data * 1024;
+    }
+
+    convert.DataUnits = function(data, source, target){
+        if(isNumber(data)){
+            source = source.toLowerCase();
+            if (source === 'byte') return byte(data, target);
+            else if (source === 'kb') return kb(data, target);
+            else if (source === 'mb') return mb(data, target);
+            else if (source === 'gb') return gb(data, target);
+            else if (source === 'pb') return pb(data, target);
+        }else return false;
+    };
+
+
     return convert;
 }));
