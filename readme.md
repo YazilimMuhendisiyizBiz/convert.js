@@ -1,5 +1,7 @@
 convert.js
 =====
+[![ReviewNinja](https://app.review.ninja/78055117/badge)](https://app.review.ninja/YazilimMuhendisiyizBiz/convert.js)
+
 This is a simple conversion library
 
 convert.metric(data, source, target)
@@ -50,6 +52,7 @@ convert.Temperature("string", "k", "f");
 => false
 ```
 
+<<<<<<< HEAD
 convert.Angle(data, source, target)
 -----------------------
 
@@ -67,3 +70,21 @@ convert.Temperature("string", "k", "f");
 => false
 ```
 
+=======
+convert.Time(data, source, target)
+-----------------------
+
+```javascript
+convert.Time(1, "second", "millisecond");
+=> 1000
+
+convert.Time(1, "hour", "minute");
+=> 60
+
+convert.Time(1, "week", "year");
+=> 0.019164955509925
+
+convert.Time("string", "day", "century");
+=> false
+```
+>>>>>>> 0d924b6075c519749aaa5a836f0de0dcac9d40c8
