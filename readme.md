@@ -65,7 +65,7 @@ convert.Angle(1009,"deg","rad");
 convert.Angle(1009,"grad","rad");
 => 4.804892776110367e-9
 
-convert.Temperature("string", "k", "f");
+convert.Angle("string", "second", "grad");
 => false
 ```
 
