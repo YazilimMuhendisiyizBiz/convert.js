@@ -259,7 +259,6 @@
     	}
     };
 
-<<<<<<< HEAD
     function deg(data, target) {
         target = target.toLowerCase();
         if(target === 'rad') return (Math.PI/180) / data;
@@ -311,7 +310,9 @@
             else if(source === 'grad') return  second(data, target);
             else if(source === 'minute') return  minute(data, target);
             else if(source === 'second') return  second(data, target);
-=======
+        }
+    };
+
     //time convert
     function century(data, target){
         target = target.toLowerCase();
@@ -412,7 +413,6 @@
             else if (source === 'hour') return hour(data, target);
             else if (source === 'second') return second(data, target);
             else if (source === 'year') return year(data, target);
->>>>>>> 0d924b6075c519749aaa5a836f0de0dcac9d40c8
         }
     };
 

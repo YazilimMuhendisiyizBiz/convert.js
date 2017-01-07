@@ -52,7 +52,6 @@ convert.Temperature("string", "k", "f");
 => false
 ```
 
-<<<<<<< HEAD
 convert.Angle(data, source, target)
 -----------------------
 
@@ -70,7 +69,6 @@ convert.Temperature("string", "k", "f");
 => false
 ```
 
-=======
 convert.Time(data, source, target)
 -----------------------
 
@@ -87,4 +85,4 @@ convert.Time(1, "week", "year");
 convert.Time("string", "day", "century");
 => false
 ```
->>>>>>> 0d924b6075c519749aaa5a836f0de0dcac9d40c8
+
