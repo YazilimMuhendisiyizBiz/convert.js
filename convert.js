@@ -259,6 +259,59 @@
     	}
     };
 
+<<<<<<< HEAD
+    function deg(data, target) {
+        target = target.toLowerCase();
+        if(target === 'rad') return (Math.PI/180) / data;
+        else if(target === 'grad') return ((Math.PI/180) / (Math.PI/200)) * data;
+        else if(target === 'minute') return data * 60;
+        else if(target === 'second') return data * 3600;
+    }
+
+    function rad(data, target) {
+        target = target.toLowerCase();
+        if(target === 'deg') return (data * 180) / Math.PI;
+        else if(target === 'grad') return data / (Math.PI / 200);
+        else if(target === 'minute') return data / (Math.PI / (180 * 60));
+        else if(target === 'second') return data / (Math.PI / (180 * 3600));
+    }
+
+    function grad(data, target) {
+        target = target.toLowerCase();
+        if(target === 'deg') return ((Math.PI/200) / (Math.PI/180)) * data;
+        else if(target === 'rad') return (Math.PI/200) / data;
+        else if(target === 'minute') return ((Math.PI/200) / (Math.PI/(180*60))) * data;
+        else if(target === 'second') return ((Math.PI/200) / (Math.PI/(180*3600))) * data;
+    }
+
+
+    function minute(data, target) {
+        target = target.toLowerCase();
+        if(target === 'deg') return ((Math.PI / (180 * 60)) / (Math.PI / 180)) * data;
+        else if(target === 'grad') return ((Math.PI / (180 * 60)) / (Math.PI / 200)) * data;
+        else if(target === 'rad') return (Math.PI / (180 * 60)) / data;
+        else if(target === 'second') return ((Math.PI / (180 * 60)) / (Math.PI/(180 * 3600))) * data;
+    }
+
+
+    function second(data, target) {
+        target = target.toLowerCase();
+        if(target === 'deg') return (Math.PI / (180 * 3600)) / (Math.PI / 180) * data;
+        else if(target === 'grad') return ((Math.PI / (180 * 3600)) / (Math.PI / 200)) * data;
+        else if(target === 'rad') return (Math.PI / (180 * 3600)) / data;
+        else if(target === 'minute') return ((Math.PI / (180 * 3600)) / (Math.PI / (180 * 60))) * data;
+    }
+
+
+    convert.Angle = function(data, source, target) {
+        if(isNumber(data)){
+            source = source.toLowerCase();
+            if(source === 'deg') return  deg(data, target);
+            else if(source === 'rad') return  rad(data, target);
+            else if(source === 'grad') return  second(data, target);
+            else if(source === 'minute') return  minute(data, target);
+            else if(source === 'second') return  second(data, target);
+=======
     //time convert
     function century(data, target){
         target = target.toLowerCase();
@@ -359,6 +412,7 @@
             else if (source === 'hour') return hour(data, target);
             else if (source === 'second') return second(data, target);
             else if (source === 'year') return year(data, target);
+>>>>>>> 0d924b6075c519749aaa5a836f0de0dcac9d40c8
         }
     };
 
