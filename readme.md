@@ -49,3 +49,21 @@ convert.Temperature(1, "f", "n");
 convert.Temperature("string", "k", "f");
 => false
 ```
+
+convert.Angle(data, source, target)
+-----------------------
+
+```javascript
+convert.Angle(100,"rad","second");
+=> 20626480.624709636
+
+convert.Angle(1009,"deg","rad");
+=> 0.000017297613993997318 
+
+convert.Angle(1009,"grad","rad");
+=> 4.804892776110367e-9
+
+convert.Temperature("string", "k", "f");
+=> false
+```
+
