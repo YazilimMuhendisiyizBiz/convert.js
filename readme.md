@@ -49,3 +49,20 @@ convert.Temperature(1, "f", "n");
 convert.Temperature("string", "k", "f");
 => false
 ```
+
+convert.Time(data, source, target)
+-----------------------
+
+```javascript
+convert.Time(1, "second", "millisecond");
+=> 1000
+
+convert.Time(1, "hour", "minute");
+=> 60
+
+convert.Time(1, "week", "year");
+=> 0.019164955509925
+
+convert.Time("string", "day", "century");
+=> false
+```
