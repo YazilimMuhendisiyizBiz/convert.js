@@ -1,6 +1,6 @@
 /*!
  * convert.js 0.0.1
- * Author: Ertuğrul Üngör
+ * Author: Ertuğrul Üngör, Yakup Ad
  * Supporter: Yakup Ad
  */
 
@@ -257,6 +257,109 @@
             else if (source === 'f') return f(data, target);
             else if (source === 'n') return n(data, target);
     	}
+    };
+
+    //time convert
+    function century(data, target){
+        target = target.toLowerCase();
+        if(target === 'minute') return data * 52596000;
+        else if(target === 'day') return data * 36525;     
+        else if(target === 'week') return data * 5217.8571428571;     
+        else if(target === 'millisecond') return data * 3155760000000;
+        else if(target === 'hour') return data * 876600; 
+        else if(target === 'second') return data * 3155760000;       
+        else if(target === 'year') return data * 100;       
+    }
+
+    function minute(data, target){
+        target = target.toLowerCase();
+        if(target === 'century') return data * 0.000000019012852688417;
+        else if(target === 'day') return data * 0.00069444444444444;     
+        else if(target === 'week') return data * 0.000099206349206349;     
+        else if(target === 'millisecond') return data * 60000;
+        else if(target === 'hour') return data * 0.016666666666667;     
+        else if(target === 'second') return data * 60;   
+        else if(target === 'year') return data * 0.0000019012852688417;       
+    }
+
+    function day(data, target){
+        target = target.toLowerCase();
+        if(target === 'century') return data * 0.000027378507871321;
+        else if(target === 'minute') return data * 1440;     
+        else if(target === 'week') return data * 0.14285714285714;     
+        else if(target === 'millisecond') return data * 86400000;
+        else if(target === 'hour') return data * 24;       
+        else if(target === 'second') return data * 86400;  
+        else if(target === 'year') return data * 0.0027378507871321;       
+    }
+
+    function week(data, target){
+        target = target.toLowerCase();
+        if(target === 'century') return data * 0.00019164955509925;
+        else if(target === 'minute') return data * 10080;     
+        else if(target === 'day') return data * 7;     
+        else if(target === 'millisecond') return data * 604800000;
+        else if(target === 'hour') return data * 168;       
+        else if(target === 'second') return data * 604800;  
+        else if(target === 'year') return data * 0.019164955509925;       
+    }
+
+    function millisecond(data, target){
+        target = target.toLowerCase();
+        if(target === 'century') return data * 0.00000000000031688087814029;
+        else if(target === 'minute') return data * 0.000016666666666667;     
+        else if(target === 'day') return data * 0.000000011574074074074;     
+        else if(target === 'week') return data * 0.0000000016534391534392;
+        else if(target === 'hour') return data * 0.00000027777777777778;       
+        else if(target === 'second') return data * 0.001;  
+        else if(target === 'year') return data * 0.000000000031688087814029;       
+    }
+
+    function hour(data, target){
+        target = target.toLowerCase();
+        if(target === 'century') return data * 0.000001140771161305;
+        else if(target === 'minute') return data * 60;     
+        else if(target === 'day') return data * 0.041666666666667;     
+        else if(target === 'week') return data * 0.005952380952381;
+        else if(target === 'millisecond') return data * 3600000;       
+        else if(target === 'second') return data * 3600;  
+        else if(target === 'year') return data * 0.0001140771161305;       
+    }
+
+    function second(data, target){
+        target = target.toLowerCase();
+        if(target === 'century') return data * 0.00000000031688087814029;
+        else if(target === 'minute') return data * 0.016666666666667;     
+        else if(target === 'day') return data * 0.000011574074074074;     
+        else if(target === 'week') return data * 0.0000016534391534392;
+        else if(target === 'millisecond') return data * 1000;       
+        else if(target === 'hour') return data * 0.00027777777777778;  
+        else if(target === 'year') return data * 0.000000031688087814029;       
+    }
+
+     function year(data, target){
+        target = target.toLowerCase();
+        if(target === 'century') return data * 0.01;
+        else if(target === 'minute') return data * 525960;     
+        else if(target === 'day') return data * 365.25;     
+        else if(target === 'week') return data * 52.178571428571;
+        else if(target === 'millisecond') return data * 31557600000;       
+        else if(target === 'hour') return data * 8766;  
+        else if(target === 'second') return data * 31557600;       
+    }
+
+    convert.Time = function(data, source, target) { 
+        if(isNumber(data)){
+            source = source.toLowerCase();
+            if (source === 'century') return century(data, target);
+            else if (source === 'minute') return minute(data, target);
+            else if (source === 'day') return day(data, target);
+            else if (source === 'week') return week(data, target);
+            else if (source === 'millisecond') return millisecond(data, target);
+            else if (source === 'hour') return hour(data, target);
+            else if (source === 'second') return second(data, target);
+            else if (source === 'year') return year(data, target);
+        }
     };
 
     return convert;
