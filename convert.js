@@ -34,6 +34,7 @@
         else if (target === 'inch') return data * 0.39370078740157;
         else if (target === 'feet') return data * 0.032808398950131;
         else if (target === 'yard') return data * 0.010936132983377;
+        else return false;
     }
 
     function km(data, target){
@@ -47,6 +48,7 @@
         else if (target === 'inch') return data * 39370.078740157;
         else if (target === 'feet') return data * 3280.8398950131;
         else if (target === 'yard') return data * 1093.6132983377;
+        else return false;
     }
 
     function hm(data, target){
@@ -60,6 +62,7 @@
         else if (target === 'inch') return data * 3937.0078740157;
         else if (target === 'feet') return data * 328.08398950131;
         else if (target === 'yard') return data * 109.36132983377;
+        else return false;
     }
 
     function dam(data, target){
@@ -73,6 +76,7 @@
         else if (target === 'inch') return data * 393.70078740157;
         else if (target === 'feet') return data * 32.808398950131;
         else if (target === 'yard') return data * 10.936132983377;
+        else return false;
     }
 
     function m(data, target){
@@ -86,6 +90,7 @@
         else if (target === 'inch') return data * 39.370078740157;
         else if (target === 'feet') return data * 3.2808398950131;
         else if (target === 'yard') return data * 1.0936132983377;
+        else return false;
     }
 
     function mm(data, target){
@@ -99,6 +104,7 @@
         else if (target === 'inch') return data * 0.039370078740157;
         else if (target === 'feet') return data * 0.0032808398950131;
         else if (target === 'yard') return data * 0.0010936132983377;
+        else return false;
     }
 
     function inch(data, target){
@@ -112,6 +118,7 @@
         else if (target === 'mm') return data * 25.4;
         else if (target === 'feet') return data * 0.083333333333333;
         else if (target === 'yard') return data * 0.027777777777778;
+        else return false;
     }
 
     function feet(data, target){
@@ -125,6 +132,7 @@
         else if (target === 'mm') return data * 304.8;
         else if (target === 'inch') return data * 12;
         else if (target === 'yard') return data * 0.33333333333333;
+        else return false;
     }
 
     function yard(data, target){
@@ -138,6 +146,7 @@
         else if (target === 'mm') return data * 914.4;
         else if (target === 'inch') return data * 36;
         else if (target === 'feet') return data * 3;
+        else return false;
     }
 
     convert.Metric = function(data, source, target){
@@ -151,7 +160,8 @@
             else if (source === 'mm') return m(data, target);  
             else if (source === 'inch') return inch(data, target);  
             else if (source === 'feet') return feet(data, target);  
-            else if (source === 'yard') return yard(data, target);             
+            else if (source === 'yard') return yard(data, target);  
+            else return false;           
         }else return false;
     };
 
@@ -163,6 +173,7 @@
         else if (target === 'gb') return data * 0.00000000093132257461548;
         else if (target === 'tb') return data * 0.00000000000090949470177293;
         else if (target === 'pb') return data * 0.00000000000000088817841970013;
+        else return false;
     }
 
     function kb(data, target){
@@ -172,6 +183,7 @@
         else if (target === 'gb') return data * 0.00000095367431640625;
         else if (target === 'tb') return data * 0.00000000093132257461548;
         else if (target === 'pb') return data * 0.00000000000090949470177293;
+        else return false;
     }
 
     function mb(data, target){
@@ -181,6 +193,7 @@
         else if (target === 'gb') return data * 0.0009765625;
         else if (target === 'tb') return data * 0.00000095367431640625;
         else if (target === 'pb') return data * 0.00000000093132257461548;
+        else return false;
     }
 
     function gb(data, target){
@@ -190,6 +203,7 @@
         else if (target === 'mb') return data * 1024;
         else if (target === 'tb') return data * 0.0009765625;
         else if (target === 'pb') return data * 0.00000095367431640625;
+        else return false;
     }
 
     function tb(data, target){
@@ -199,6 +213,7 @@
         else if (target === 'mb') return data * 1048576;
         else if (target === 'gb') return data * 1024;
         else if (target === 'pb') return data * 0.0009765625;
+        else return false;
     }
 
     function pb(data, target){
@@ -208,6 +223,7 @@
         else if (target === 'mb') return data * 1073741824;
         else if (target === 'gb') return data * 1048576;
         else if (target === 'tb') return data * 1024;
+        else return false;
     }
 
     convert.DataUnits = function(data, source, target){
@@ -219,6 +235,7 @@
             else if (source === 'mb') return mb(data, target);
             else if (source === 'gb') return gb(data, target);
             else if (source === 'pb') return pb(data, target);
+            else return false;
         }else return false;
     };
 
@@ -228,6 +245,7 @@
     	if(target === 'k') return data + 273.15;
         else if (target === 'f') return 1.8 * data + 32;
         else if (target === 'n') return data * 0.33;
+        else return false;
     }
 
     function k(data, target) {
@@ -235,6 +253,7 @@
     	if(target === 'c') return data - 273.15;
         else if (target === 'f') return 9 * data / 5 - 459.67 ;
         else if (target === 'n') return 0.33 * (data - 273.15);
+        else return false;
     }
 
     function f(data, target) {
@@ -242,6 +261,7 @@
     	if(target === 'c') return 5 * (data - 32) / 9;
         else if (target === 'k') return 5 * (data + 459.67) / 9;
         else if (target === 'n') return 0.18333 * (data - 32);
+        else return false;
     }
 
     function n(data, target) {
@@ -249,6 +269,7 @@
     	if(target === 'c') return data / 0.33;
         else if (target === 'k') return data / 0.33 + 273.15;
         else if (target === 'f') return 0.18333 * (data - 32);
+        else return false;
     }
 
     convert.Temperature = function(data, source, target) { 
@@ -259,6 +280,7 @@
             else if (source === 'k') return k(data, target);
             else if (source === 'f') return f(data, target);
             else if (source === 'n') return n(data, target);
+            else return false;
     	}else return false;
     };
 
@@ -268,6 +290,7 @@
         else if(target === 'grad') return ((Math.PI/180) / (Math.PI/200)) * data;
         else if(target === 'minute') return data * 60;
         else if(target === 'second') return data * 3600;
+        else return false;
     }
 
     function rad(data, target) {
@@ -276,6 +299,7 @@
         else if(target === 'grad') return data / (Math.PI / 200);
         else if(target === 'minute') return data / (Math.PI / (180 * 60));
         else if(target === 'second') return data / (Math.PI / (180 * 3600));
+        else return false;
     }
 
     function grad(data, target) {
@@ -284,6 +308,7 @@
         else if(target === 'rad') return (Math.PI/200) / data;
         else if(target === 'minute') return ((Math.PI/200) / (Math.PI/(180*60))) * data;
         else if(target === 'second') return ((Math.PI/200) / (Math.PI/(180*3600))) * data;
+        else return false;
     }
 
 
@@ -302,6 +327,7 @@
         else if(target === 'hour') return data * 0.016666666666667;     
         else if(target === 'second') return data * 60;   
         else if(target === 'year') return data * 0.0000019012852688417;       
+        else return false;
     }
 
 
@@ -320,6 +346,7 @@
         else if(target === 'millisecond') return data * 1000;       
         else if(target === 'hour') return data * 0.00027777777777778;  
         else if(target === 'year') return data * 0.000000031688087814029;   
+        else return false;
     }
 
 
@@ -332,6 +359,7 @@
             else if(source === 'grad') return  second(data, target);
             else if(source === 'minute') return  minute(data, target);
             else if(source === 'second') return  second(data, target);
+            else return false;
         }else return false;
     };
 
@@ -345,6 +373,7 @@
         else if(target === 'hour') return data * 876600; 
         else if(target === 'second') return data * 3155760000;       
         else if(target === 'year') return data * 100;       
+        else return false;
     }
 
     function day(data, target){
@@ -355,7 +384,8 @@
         else if(target === 'millisecond') return data * 86400000;
         else if(target === 'hour') return data * 24;       
         else if(target === 'second') return data * 86400;  
-        else if(target === 'year') return data * 0.0027378507871321;       
+        else if(target === 'year') return data * 0.0027378507871321;  
+        else return false;     
     }
 
     function week(data, target){
@@ -366,7 +396,8 @@
         else if(target === 'millisecond') return data * 604800000;
         else if(target === 'hour') return data * 168;       
         else if(target === 'second') return data * 604800;  
-        else if(target === 'year') return data * 0.019164955509925;       
+        else if(target === 'year') return data * 0.019164955509925;  
+        else return false;     
     }
 
     function millisecond(data, target){
@@ -377,7 +408,8 @@
         else if(target === 'week') return data * 0.0000000016534391534392;
         else if(target === 'hour') return data * 0.00000027777777777778;       
         else if(target === 'second') return data * 0.001;  
-        else if(target === 'year') return data * 0.000000000031688087814029;       
+        else if(target === 'year') return data * 0.000000000031688087814029; 
+        else return false;      
     }
 
     function hour(data, target){
@@ -389,6 +421,7 @@
         else if(target === 'millisecond') return data * 3600000;       
         else if(target === 'second') return data * 3600;  
         else if(target === 'year') return data * 0.0001140771161305;       
+        else return false;
     }
 
      function year(data, target){
@@ -400,6 +433,7 @@
         else if(target === 'millisecond') return data * 31557600000;       
         else if(target === 'hour') return data * 8766;  
         else if(target === 'second') return data * 31557600;       
+        else return false;
     }
 
     convert.Time = function(data, source, target) { 
@@ -414,6 +448,7 @@
             else if (source === 'hour') return hour(data, target);
             else if (source === 'second') return second(data, target);
             else if (source === 'year') return year(data, target);
+            else return false;
         }else return false;
     };
 
@@ -424,6 +459,7 @@
         else if(target === 'mj') return data * 0.001;
         else if(target === 'cal') return data * 238.8458966275;
         else if(target === 'kcal') return data * 0.2388458966275;
+        else return false;
     }
 
     function joule(data, target){
@@ -432,6 +468,7 @@
         else if(target === 'mj') return data * 0.000001;
         else if(target === 'cal') return data * 0.2388458966275;
         else if(target === 'kcal') return data * 0.0002388458966275;
+        else return false;
     }
 
     function megajoule(data, target){
@@ -440,6 +477,7 @@
         else if(target === 'j') return data * 1000000;
         else if(target === 'cal') return data * 238845.8966275;
         else if(target === 'kcal') return data * 238.8458966275;
+        else return false;
     }
 
     function calorie(data, target){
@@ -448,6 +486,7 @@
         else if(target === 'j') return data * 4.1868;
         else if(target === 'mj') return data * 0.0000041868;
         else if(target === 'kcal') return data * 0.001;
+        else return false;
     }
 
     function kilocalorie(data, target){
@@ -456,6 +495,7 @@
         else if(target === 'j') return data * 4186.8;
         else if(target === 'mj') return data * 0.0041868;
         else if(target === 'cal') return data * 1000;
+        else return false;
     }
 
     convert.Energy = function(data, source, target){
@@ -467,6 +507,7 @@
             else if (source === 'mj') return megajoule(data, target);
             else if (source === 'cal') return calorie(data, target);
             else if (source === 'kcal') return kilocalorie(data, target);
+            else return false;
         }else return false;
     };
 
