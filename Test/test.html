@@ -6,6 +6,42 @@
 	<script src="../convert.js"></script>
 </head>
 <body>
+	<p><em>Please have a look at the JavaScript Console</em></p>
 	
+	<script>
+		// This is a simple conversion library
+		
+		// convert.Metric(data, source, target)
+		console.group('%c Convert Metric', 'color:green');
+		console.log('convert.Metric(1, "cm", "m"): ', convert.Metric(1, "cm", "m"));
+		console.log('convert.Metric(1, "hm", "inch"): ', convert.Metric(1, "hm", "inch"));
+		console.log('convert.Metric(1, "km", "mm"): ', convert.Metric(1, "km", "mm"));
+		console.log('convert.Metric("string", "dam", "yard"): ', convert.Metric("string", "dam", "yard"));
+		console.groupEnd('%c Convert Metric', 'color:green');
+				
+		// convert.DataUnits(data, source, target)
+		console.groupCollapsed('%c Convert DataUnits', 'color:blue');
+		console.log('convert.DataUnits(1, "mb", "kb"): ', convert.DataUnits(1, "mb", "kb"));
+		console.log('convert.DataUnits(1, "byte", "tb"): ', convert.DataUnits(1, "byte", "tb"));
+		console.log('convert.DataUnits("string", "gb", "pb"): ', convert.DataUnits("string", "gb", "pb"));
+		console.groupEnd('%c Convert DataUnits', 'color:blue');
+		
+		// convert.Temperature(data, source, target)
+		console.groupCollapsed('%c Convert Temperature', 'color:red');
+		console.log('convert.Temperature(1, "c", "k"): ', convert.Temperature(1, "c", "k"));
+		console.log('convert.Temperature(1, "n", "c"): ', convert.Temperature(1, "n", "c"));
+		console.log('convert.Temperature(1, "f", "n"): ', convert.Temperature(1, "f", "n"));
+		console.log('convert.Temperature("string", "k", "f"): ', convert.Temperature("string", "k", "f"));
+		console.groupEnd('%c Convert Temperature', 'color:red');
+		
+		// convert.Angle(data, source, target)
+		console.groupCollapsed('%c Convert Angle', 'color:brown');
+		console.log('convert.Angle(100,"rad","second"): ', convert.Angle(100,"rad","second"));
+		console.log('convert.Angle(1009,"deg","rad"): ', convert.Angle(1009,"deg","rad"));
+		console.log('convert.Angle(1009,"grad","rad"): ', convert.Angle(1009,"grad","rad"));
+		console.log('convert.Angle("string", "second", "grad"): ', convert.Angle("string", "second", "grad"));
+		console.groupEnd('%c Convert Angle', 'color:brown');
+		
+	</script>
 </body>
 </html>
