@@ -256,7 +256,7 @@
             else if (source === 'k') return k(data, target);
             else if (source === 'f') return f(data, target);
             else if (source === 'n') return n(data, target);
-    	}
+    	}else return false;
     };
 
     function deg(data, target) {
@@ -328,7 +328,7 @@
             else if(source === 'grad') return  second(data, target);
             else if(source === 'minute') return  minute(data, target);
             else if(source === 'second') return  second(data, target);
-        }
+        }else return false;
     };
 
     //time convert
@@ -409,7 +409,59 @@
             else if (source === 'hour') return hour(data, target);
             else if (source === 'second') return second(data, target);
             else if (source === 'year') return year(data, target);
-        }
+        }else return false;
+    };
+
+    //Energy convert
+    function kilojoule(data, target){
+        target = target.toLowerCase();
+        if(target === 'j') return data * 1000;
+        else if(target === 'mj') return data * 0.001;
+        else if(target === 'cal') return data * 238.8458966275;
+        else if(target === 'kcal') return data * 0.2388458966275;
+    }
+
+    function joule(data, target){
+        target = target.toLowerCase();
+        if(target === 'kj') return data * 0.001;
+        else if(target === 'mj') return data * 0.000001;
+        else if(target === 'cal') return data * 0.2388458966275;
+        else if(target === 'kcal') return data * 0.0002388458966275;
+    }
+
+    function megajoule(data, target){
+        target = target.toLowerCase();
+        if(target === 'kj') return data * 1000;
+        else if(target === 'j') return data * 1000000;
+        else if(target === 'cal') return data * 238845.8966275;
+        else if(target === 'kcal') return data * 238.8458966275;
+    }
+
+    function calorie(data, target){
+        target = target.toLowerCase();
+        if(target === 'kj') return data * 0.0041868;
+        else if(target === 'j') return data * 4.1868;
+        else if(target === 'mj') return data * 0.0000041868;
+        else if(target === 'kcal') return data * 0.001;
+    }
+
+    function kilocalorie(data, target){
+        target = target.toLowerCase();
+        if(target === 'kj') return data * 4.1868;
+        else if(target === 'j') return data * 4186.8;
+        else if(target === 'mj') return data * 0.0041868;
+        else if(target === 'cal') return data * 1000;
+    }
+
+    convert.Energy = function(data, source, target){
+        if(isNumber(data)){
+            source = source.toLowerCase();
+            if (source === 'kj') return kilojoule(data, target);
+            else if (source === 'j') return joule(data, target);
+            else if (source === 'mj') return megajoule(data, target);
+            else if (source === 'cal') return calorie(data, target);
+            else if (source === 'kcal') return kilocalorie(data, target);
+        }else return false;
     };
 
     return convert;

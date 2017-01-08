@@ -86,3 +86,20 @@ convert.Time("string", "day", "century");
 => false
 ```
 
+convert.Energy(data, source, target)
+-----------------------
+
+```javascript
+convert.Energy(1, "j", "kj");
+=> 0.001
+
+convert.Energy(1, "kcal", "cal");
+=> 1000
+
+convert.Energy(1, "j", "cal");
+=> 0.2388458966275
+
+convert.Energy("string", "mj", "j");
+=> false
+```
+
