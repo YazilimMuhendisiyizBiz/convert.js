@@ -256,7 +256,7 @@
             else if (source === 'k') return k(data, target);
             else if (source === 'f') return f(data, target);
             else if (source === 'n') return n(data, target);
-    	}
+    	}else return false;
     };
 
     function deg(data, target) {
@@ -328,7 +328,7 @@
             else if(source === 'grad') return  second(data, target);
             else if(source === 'minute') return  minute(data, target);
             else if(source === 'second') return  second(data, target);
-        }
+        }else return false;
     };
 
     //time convert
@@ -409,7 +409,7 @@
             else if (source === 'hour') return hour(data, target);
             else if (source === 'second') return second(data, target);
             else if (source === 'year') return year(data, target);
-        }
+        }else return false;
     };
 
     //Energy convert
