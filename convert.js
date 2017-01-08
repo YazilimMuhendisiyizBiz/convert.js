@@ -140,7 +140,7 @@
         else if (target === 'feet') return data * 3;
     }
 
-    convert.metric = function(data, source, target){
+    convert.Metric = function(data, source, target){
         if(isNumber(data)){
             source = source.toLowerCase();
             if (source === 'cm') return cm(data, target);
