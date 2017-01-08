@@ -286,26 +286,44 @@
 
     function minute(data, target) {
         target = target.toLowerCase();
+        //angle
         if(target === 'deg') return ((Math.PI / (180 * 60)) / (Math.PI / 180)) * data;
         else if(target === 'grad') return ((Math.PI / (180 * 60)) / (Math.PI / 200)) * data;
         else if(target === 'rad') return (Math.PI / (180 * 60)) / data;
         else if(target === 'second') return ((Math.PI / (180 * 60)) / (Math.PI/(180 * 3600))) * data;
+        //time
+        else if(target === 'century') return data * 0.000000019012852688417;
+        else if(target === 'day') return data * 0.00069444444444444;     
+        else if(target === 'week') return data * 0.000099206349206349;     
+        else if(target === 'millisecond') return data * 60000;
+        else if(target === 'hour') return data * 0.016666666666667;     
+        else if(target === 'second') return data * 60;   
+        else if(target === 'year') return data * 0.0000019012852688417;       
     }
 
 
     function second(data, target) {
         target = target.toLowerCase();
+        //angle
         if(target === 'deg') return (Math.PI / (180 * 3600)) / (Math.PI / 180) * data;
         else if(target === 'grad') return ((Math.PI / (180 * 3600)) / (Math.PI / 200)) * data;
         else if(target === 'rad') return (Math.PI / (180 * 3600)) / data;
+        //time
         else if(target === 'minute') return ((Math.PI / (180 * 3600)) / (Math.PI / (180 * 60))) * data;
+        else if(target === 'century') return data * 0.00000000031688087814029;
+        else if(target === 'minute') return data * 0.016666666666667;     
+        else if(target === 'day') return data * 0.000011574074074074;     
+        else if(target === 'week') return data * 0.0000016534391534392;
+        else if(target === 'millisecond') return data * 1000;       
+        else if(target === 'hour') return data * 0.00027777777777778;  
+        else if(target === 'year') return data * 0.000000031688087814029;   
     }
 
 
     convert.Angle = function(data, source, target) {
         if(isNumber(data)){
             source = source.toLowerCase();
-            if(source === 'deg') return  deg(data, target);
+            if(source === 'deg') return deg(data, target);
             else if(source === 'rad') return  rad(data, target);
             else if(source === 'grad') return  second(data, target);
             else if(source === 'minute') return  minute(data, target);
@@ -323,17 +341,6 @@
         else if(target === 'hour') return data * 876600; 
         else if(target === 'second') return data * 3155760000;       
         else if(target === 'year') return data * 100;       
-    }
-
-    function minute(data, target){
-        target = target.toLowerCase();
-        if(target === 'century') return data * 0.000000019012852688417;
-        else if(target === 'day') return data * 0.00069444444444444;     
-        else if(target === 'week') return data * 0.000099206349206349;     
-        else if(target === 'millisecond') return data * 60000;
-        else if(target === 'hour') return data * 0.016666666666667;     
-        else if(target === 'second') return data * 60;   
-        else if(target === 'year') return data * 0.0000019012852688417;       
     }
 
     function day(data, target){
@@ -378,17 +385,6 @@
         else if(target === 'millisecond') return data * 3600000;       
         else if(target === 'second') return data * 3600;  
         else if(target === 'year') return data * 0.0001140771161305;       
-    }
-
-    function second(data, target){
-        target = target.toLowerCase();
-        if(target === 'century') return data * 0.00000000031688087814029;
-        else if(target === 'minute') return data * 0.016666666666667;     
-        else if(target === 'day') return data * 0.000011574074074074;     
-        else if(target === 'week') return data * 0.0000016534391534392;
-        else if(target === 'millisecond') return data * 1000;       
-        else if(target === 'hour') return data * 0.00027777777777778;  
-        else if(target === 'year') return data * 0.000000031688087814029;       
     }
 
      function year(data, target){
