@@ -249,6 +249,7 @@
         else if (target === 'f') return 0.18333 * (data - 32);
     }
 
+    //Temparature Convert
     convert.Temperature = function(data, source, target) { 
     	if(isNumber(data)){
     		source = source.toLowerCase();
