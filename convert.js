@@ -142,7 +142,6 @@
 
     convert.Metric = function(data, source, target){
         if(isNumber(data)){
-			if (!source || !target) return false;
             source = source.toLowerCase();
             if (source === 'cm') return cm(data, target);
             else if (source === 'km') return km(data, target);
@@ -212,7 +211,6 @@
 
     convert.DataUnits = function(data, source, target){
         if(isNumber(data)){
-			if (!source || !target) return false;
             source = source.toLowerCase();
             if (source === 'byte') return byte(data, target);
             else if (source === 'kb') return kb(data, target);
@@ -251,9 +249,9 @@
         else if (target === 'f') return 0.18333 * (data - 32);
     }
 
+    //Temparature Convert
     convert.Temperature = function(data, source, target) { 
     	if(isNumber(data)){
-			if (!source || !target) return false;
     		source = source.toLowerCase();
     		if (source === 'c') return c(data, target);
             else if (source === 'k') return k(data, target);
@@ -325,7 +323,6 @@
 
     convert.Angle = function(data, source, target) {
         if(isNumber(data)){
-			if (!source || !target) return false;
             source = source.toLowerCase();
             if(source === 'deg') return deg(data, target);
             else if(source === 'rad') return  rad(data, target);
@@ -404,7 +401,6 @@
 
     convert.Time = function(data, source, target) { 
         if(isNumber(data)){
-			if (!source || !target) return false;
             source = source.toLowerCase();
             if (source === 'century') return century(data, target);
             else if (source === 'minute') return minute(data, target);
@@ -460,7 +456,6 @@
 
     convert.Energy = function(data, source, target){
         if(isNumber(data)){
-			if (!source || !target) return false;
             source = source.toLowerCase();
             if (source === 'kj') return kilojoule(data, target);
             else if (source === 'j') return joule(data, target);
