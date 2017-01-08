@@ -52,7 +52,6 @@ convert.Temperature("string", "k", "f");
 => false
 ```
 
-<<<<<<< HEAD
 convert.Angle(data, source, target)
 -----------------------
 
@@ -66,11 +65,10 @@ convert.Angle(1009,"deg","rad");
 convert.Angle(1009,"grad","rad");
 => 4.804892776110367e-9
 
-convert.Temperature("string", "k", "f");
+convert.Angle("string", "second", "grad");
 => false
 ```
 
-=======
 convert.Time(data, source, target)
 -----------------------
 
@@ -87,4 +85,21 @@ convert.Time(1, "week", "year");
 convert.Time("string", "day", "century");
 => false
 ```
->>>>>>> 0d924b6075c519749aaa5a836f0de0dcac9d40c8
+
+convert.Energy(data, source, target)
+-----------------------
+
+```javascript
+convert.Energy(1, "j", "kj");
+=> 0.001
+
+convert.Energy(1, "kcal", "cal");
+=> 1000
+
+convert.Energy(1, "j", "cal");
+=> 0.2388458966275
+
+convert.Energy("string", "mj", "j");
+=> false
+```
+
