@@ -1,6 +1,6 @@
 convert.js
 =====
-[![ReviewNinja](https://app.review.ninja/78055117/badge)](https://app.review.ninja/YazilimMuhendisiyizBiz/convert.js)
+![version badge](https://img.shields.io/badge/version-0.0.1-green.svg)
 
 This is a simple conversion library
 
