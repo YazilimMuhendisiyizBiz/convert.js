@@ -1,7 +1,7 @@
 /*!
  * convert.js 0.0.1
- * Author: Ertuğrul Üngör, Yakup Ad
- * Supporter: Yakup Ad
+ * Authors: Ertuğrul Üngör, Yakup Ad , Okan Davut
+ * Supporters: Palash Mondal 
  */
 
 ;(function(root, factory) {    
