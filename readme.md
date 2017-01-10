@@ -103,3 +103,20 @@ convert.Energy("string", "mj", "j");
 => false
 ```
 
+convert.Astronomical(data, source, target)
+-----------------------
+
+```javascript
+convert.Astronomical(1, "lightSecond", "mile");
+=> 186282.39705
+
+convert.Astronomical(1, "au96", "lightYear_julian");
+=> 0.000015812507409
+
+convert.Astronomical(1, "km", "lightDay");
+=> 3.8606955463e-11
+
+convert.Astronomical("string", "lightYear_traditional", "m");
+=> false
+```
+
