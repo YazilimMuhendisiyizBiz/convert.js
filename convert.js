@@ -314,6 +314,7 @@
     	}else return false;
     };
 
+    //Angle convert
     function deg(data, target) {
         target = target.toLowerCase();
         if(target === 'rad') return (Math.PI/180) / data;
