@@ -1,7 +1,7 @@
 /*!
  * convert.js 0.0.1
- * Author: Ertuğrul Üngör, Yakup Ad
- * Supporter: Yakup Ad
+ * Authors: Ertuğrul Üngör, Yakup Ad , Okan Davut
+ * Supporters: Palash Mondal 
  */
 
 ;(function(root, factory) {    
@@ -21,7 +21,13 @@
     function isNumber(data){
         return toString.call(data) === '[object Number]';
     }
-
+	
+    // This function is used to check if the variable passed is a string or not
+    // additionally it checks for if the value is not null or undefined or any falsy value
+    function isStringVariable(value){
+	return !!value && (typeof value === 'string' || value instanceof String);
+    }
+	
     //Metric Convert
     function cm(data, target){
         target = target.toLowerCase();
@@ -171,11 +177,11 @@
         else if (target === 'inch') return data * 36;
         else if (target === 'feet') return data * 3;
         else return false;
-    }
-
+    }	
+	
     convert.Metric = function(data, source, target){
         if(isNumber(data)){
-			if (!source || !target) return false;
+	    if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;	 		
             source = source.toLowerCase();
             if (source === 'cm') return cm(data, target);
             else if (source === 'km') return km(data, target);
@@ -252,7 +258,7 @@
 
     convert.DataUnits = function(data, source, target){
         if(isNumber(data)){
-			if (!source || !target) return false;
+	    if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;
             source = source.toLowerCase();
             if (source === 'byte') return byte(data, target);
             else if (source === 'kb') return kb(data, target);
@@ -298,9 +304,9 @@
 
     convert.Temperature = function(data, source, target) { 
     	if(isNumber(data)){
-			if (!source || !target) return false;
-    		source = source.toLowerCase();
-    		if (source === 'c') return c(data, target);
+	    if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;
+            source = source.toLowerCase();
+    	    if (source === 'c') return c(data, target);
             else if (source === 'k') return k(data, target);
             else if (source === 'f') return f(data, target);
             else if (source === 'n') return n(data, target);
@@ -377,7 +383,7 @@
 
     convert.Angle = function(data, source, target) {
         if(isNumber(data)){
-            if (!source || !target) return false;
+            if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;
             source = source.toLowerCase();
             if(source === 'deg') return deg(data, target);
             else if(source === 'rad') return  rad(data, target);
@@ -463,7 +469,7 @@
 
     convert.Time = function(data, source, target) { 
         if(isNumber(data)){
-            if (!source || !target) return false;
+            if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;
             source = source.toLowerCase();
             if (source === 'century') return century(data, target);
             else if (source === 'minute') return minute(data, target);
@@ -525,7 +531,7 @@
 
     convert.Energy = function(data, source, target){
         if(isNumber(data)){
-            if (!source || !target) return false;
+            if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;
             source = source.toLowerCase();
             if (source === 'kj') return kilojoule(data, target);
             else if (source === 'j') return joule(data, target);
@@ -699,7 +705,7 @@
 
     convert.Astronomical = function(data, source, target){
         if(isNumber(data)){
-            if (!source || !target) return false;
+            if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;
             source = source.toLowerCase();
             if (source === 'au96') return au96(data, target);
             else if (source === 'km') return km(data, target);
