@@ -723,7 +723,6 @@
         }else return false;
     };
 
-
     //Convert Speed
     function cm_s(data, target){
         target = target.toLowerCase();
