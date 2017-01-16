@@ -57,6 +57,14 @@
 		console.log('convert.Astronomical(1, "km", "lightDay"): ', convert.Astronomical(1, "km", "lightDay"));
 		console.log('convert.Astronomical("string", "lightYear_traditional", "m"): ', convert.Astronomical("string", "lightYear_traditional", "m"));
 		console.groupEnd('%c Convert Astronomical', 'color:aqua');
+
+		// convert.Speed(data, source, target)
+		console.groupCollapsed('%c Convert Speed', 'color:orange');
+		console.log('convert.Speed(19,"m_s","km_s"):', convert.Speed(19,"m_s","km_s"));
+		console.log('convert.Speed(19,"s_light","km_s"): ', convert.Speed(19,"s_light","km_s"));
+		console.log('convert.Speed(19,"ft_s","km_s"): ', convert.Speed(19,"ft_s","km_s"));
+		console.log('convert.Speed(19,"ma","kn"): ', convert.Speed(19,"ma","kn"));
+		console.groupEnd('%c Convert Speed', 'color:orange');
 		
 	</script>
 </body>
