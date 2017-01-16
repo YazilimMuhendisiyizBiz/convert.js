@@ -124,18 +124,41 @@ convert.Speed(data, source, target)
 -----------------------
 
 ```javascript
-convert.Speed(19,'m_s','km_s');
+convert.Speed(19, "m/s", "km/s");
 => 0.019
 
-convert.Speed(19,'s_light','km_s');
+convert.Speed(19, "s/light", "km/s");
 => 5696056.702
 
-convert.Speed(19,'ft_s','km_s');
+convert.Speed(19, "ft/s", "km/s");
 => 30.00057912
 
-convert.Speed(19,'ma','kn');
+convert.Speed(19, "ma", "kn");
 => 12567.946004319654
 
-convert.Speed('string','ft_s','km_s');
+convert.Speed("string", "ft/s", "km/s");
 => false
+```
+
+convert.Periodic(data)
+-----------------------
+
+```javascript
+convert.Periodic(18);
+=> "Ar"
+
+convert.Periodic(10);
+=> "Ne"
+
+convert.Periodic(120);
+=> "Ubn"
+
+convert.Periodic(0);
+=> "Please enter a value between 1 and 120!"
+
+convert.Periodic("lol");
+=> false
+
+convert.Periodic(lol)
+=> "ReferenceError: Can't find variable: lol"
 ```
