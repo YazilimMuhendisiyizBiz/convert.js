@@ -41,8 +41,16 @@
 		console.log('convert.Angle(1009,"grad","rad"): ', convert.Angle(1009,"grad","rad"));
 		console.log('convert.Angle("string", "second", "grad"): ', convert.Angle("string", "second", "grad"));
 		console.groupEnd('%c Convert Angle', 'color:brown');
+		
+		// convert.Time(data, source, target)
+		console.groupCollapsed('%c Convert Time', 'color:gray');
+		console.log('convert.Time(1, "hour", "minute"): ', convert.Time(1, "hour", "minute"));
+		console.log('convert.Time(1, "week", "year"): ', convert.Time(1, "week", "year"));
+		console.log('convert.Time(1009,"minute","year"): ', convert.Time(10,"minute","year"));
+		console.log('convert.Time("string", "day", "century"): ', convert.Time("string", "day", "century"));
+		console.groupEnd('%c Convert Time', 'color:gray');
 
-		// convert.Angle(data, source, target)
+		// convert.Astronomical(data, source, target)
 		console.groupCollapsed('%c Convert Astronomical', 'color:aqua');
 		console.log('convert.Astronomical(1, "lightSecond", "mile"): ', convert.Astronomical(1, "lightSecond", "mile"));
 		console.log('convert.Astronomical(1, "au96", "lightYear_julian"): ', convert.Astronomical(1, "au96", "lightYear_julian"));
