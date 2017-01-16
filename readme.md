@@ -134,7 +134,7 @@ convert.Speed(19,'ft_s','km_s');
 => 30.00057912
 
 convert.Speed(19,'ma','kn');
-12567.946004319654
+=> 12567.946004319654
 
 convert.Speed('string','ft_s','km_s');
 => false
