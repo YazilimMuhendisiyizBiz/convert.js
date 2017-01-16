@@ -1,6 +1,6 @@
 convert.js
 =====
-![version badge](https://img.shields.io/badge/version-0.0.1-green.svg)
+![version badge](https://img.shields.io/badge/version-0.0.2-green.svg)
 
 This is a simple conversion library
 

@@ -16,7 +16,7 @@
     }
 }(this, function() { 
     var convert = {};
-    convert.VERSION = '0.0.1';
+    convert.VERSION = '0.0.2';
 
     function isNumber(data){
         return toString.call(data) === '[object Number]';
