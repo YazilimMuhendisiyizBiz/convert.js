@@ -18,7 +18,7 @@ convert.Metric(veri, kaynak, hedef)
 ----------
 
 
-**Kaynak ve hedef türleri: **
+**Kaynak ve hedef türleri:**
 
  - cm => Santimetre
  - km => Kilometre
