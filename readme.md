@@ -1,6 +1,6 @@
 convert.js
 =====
-![version badge](https://img.shields.io/badge/version-0.0.1-green.svg)
+![version badge](https://img.shields.io/badge/version-0.0.2-green.svg) [![GitHub issues](https://img.shields.io/github/issues/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/issues) [![GitHub forks](https://img.shields.io/github/forks/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/network) [![GitHub stars](https://img.shields.io/github/stars/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/stargazers) 
 
 This is a simple conversion library
 
