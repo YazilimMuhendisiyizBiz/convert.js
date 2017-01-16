@@ -1,37 +1,37 @@
-#Metric Conversion
+#Metrik ifade çevirimi
 
-**Usage:**
+**Kullanım:**
 ```javascript
-convert.Metric(data, resources, target)
+convert.Metric(veri, kaynak, hedef)
 ```
 ----------
 
 
-**Parameters:**
-> Data => The Value that will converte
+**Parametreler:**
+> Veri => Çevrilmesini istediğimiz değer
 
-> Resources => The actual unit of value
+> Kaynak => Değerin şu anki birimi
 
-> Target => The unit that will be converted
+> Hedef => Çıktı olarak almak istediğimiz birim
 
 
 ----------
 
 
-**The Types of Resources and Target:**
+**Kaynak ve hedef türleri:**
 
- - cm => cantimeters
- - km => kilometers
- - hm => hectometers
- - m => meters
- - mm => milimeters
- - inch => inch
- - feet  => feet
- - yard => yard
+ - cm => Santimetre
+ - km => Kilometre
+ - hm => Hektometre
+ - m => Metre
+ - mm => Milimetre
+ - inch => İnç
+ - feet  => fit
+ - yard => yarda
   
 ----------
 
-**The Sample of Usage:**
+**Örnek kullanımlar:**
 
 ```javascript
 convert.Metric(1, "cm", "m");
@@ -43,5 +43,4 @@ convert.Metric(1, "hm", "inch");
 convert.Metric(1, "km", "mm");
 => 1000000
 ```
-
 
