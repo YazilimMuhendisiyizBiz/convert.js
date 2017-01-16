@@ -9,8 +9,10 @@ convert.Metric(veri, kaynak, hedef)
 
 **Parametreler:**
 > Veri => Çevrilmesini istediğimiz değer
-> Kaynak => Hangi uzunluk birimini çevireceğiz
-> Hedef => Çıktı olarak hangi uzunluk birimine çevireceğiz
+
+> Kaynak => Değerin şu anki birimi
+
+> Hedef => Çıktı olarak almak istediğimiz birim
 
 
 ----------
