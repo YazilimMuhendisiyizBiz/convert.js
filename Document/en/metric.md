@@ -18,7 +18,7 @@ convert.Metric(data, source, target)
 ----------
 
 
-**The Types of Resources and Target:**
+**The Types of Source and Target:**
 
  - cm => cantimeters
  - km => kilometers
