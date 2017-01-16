@@ -2,7 +2,7 @@
 
 **Usage:**
 ```javascript
-convert.Metric(data, resources, target)
+convert.Metric(data, source, target)
 ```
 ----------
 
@@ -10,7 +10,7 @@ convert.Metric(data, resources, target)
 **Parameters:**
 > Data => The Value that will converte
 
-> Resources => The actual unit of value
+> Source => The actual unit of value
 
 > Target => The unit that will be converted
 
