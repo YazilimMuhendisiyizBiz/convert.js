@@ -145,20 +145,20 @@ convert.Periodic(data)
 
 ```javascript
 convert.Periodic(18);
-=> Ar
+=> "Ar"
 
 convert.Periodic(10);
-=> Ne
+=> "Ne"
 
 convert.Periodic(120);
-=> Ubn
+=> "Ubn"
 
 convert.Periodic(0);
-=> Please enter a value between 1 and 120!
+=> "Please enter a value between 1 and 120!"
 
 convert.Periodic("lol");
 => false
 
 convert.Periodic(lol)
-=> ReferenceError: Can't find variable: lol
+=> "ReferenceError: Can't find variable: lol"
 ```
