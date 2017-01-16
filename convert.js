@@ -16,7 +16,7 @@
     }
 }(this, function() { 
     var convert = {};
-    convert.VERSION = '0.0.1';
+    convert.VERSION = '0.0.2';
 
     function isNumber(data){
         return toString.call(data) === '[object Number]';
@@ -738,6 +738,7 @@
         else if (target === 'mm_s') return (0.01 / 0.001) * data;
         else if (target === 's_light') return (0.01 / 299792458) * data;
         else if (target === 's_sound') return (0.01 / 340.29) * data;
+        else return false;
     }
 
     function ft_s(data, target){
@@ -754,6 +755,7 @@
         else if (target === 'mm_s') return (0.03048 / 0.001) * data;
         else if (target === 's_light') return (0.03048 / 299792458) * data;
         else if (target === 's_sound') return (0.03048 / 340.29) * data;
+        else return false;
      }
 
      function inch_s(data, target){
@@ -770,6 +772,7 @@
         else if (target === 'mm_s') return ((0.3048/12) / 0.001) * data;
         else if (target === 's_light') return ((0.3048/12) / 299792458 ) * data;
         else if (target === 's_sound') return ((0.3048/12) / 340.29) * data;
+        else return false;
      }
 
      function km_h(data, target){
@@ -786,6 +789,7 @@
         else if (target === 'mm_s') return ((1000/3600) / 0.001 ) * data;
         else if (target === 's_light') return ((1000/3600) / 299792458 ) * data;
         else if (target === 's_sound') return ((1000/3600) / 340.29) * data;
+        else return false;
      }
 
      function km_s(data, target){
@@ -802,6 +806,7 @@
         else if (target === 'mm_s') return (1000 / 0.001) * data;
         else if (target === 's_light') return (1000 / 299792458) * data;
         else if (target === 's_sound') return (1000 / 340.29) * data;
+        else return false;
      }
 
      function ma(data, target){
@@ -818,6 +823,7 @@
         else if (target === 'mm_s') return ((1852/3600) / 0.001) * data;
         else if (target === 's_light') return ((1852/3600) / 299792458) * data;
         else if (target === 's_sound') return ((1852/3600) / 340.29) * data;
+        else return false;
      }
 
      function kn(data, target){
@@ -834,6 +840,7 @@
         else if (target === 'mm_s') return ((1852/3600) / 0.001) * data;
         else if (target === 's_light') return ((1852/3600) / 299792458) * data;
         else if (target === 's_sound') return ((1852/3600) / 340.29) * data;
+        else return false;
      }
 
 
@@ -851,6 +858,7 @@
         else if (target === 'mm_s') return (340.29 / 0.001) * data;
         else if (target === 's_light') return (340.29 / 299792458) * data;
         else if (target === 's_sound') return (340.29 / 340.29) * data;
+        else return false;
      }
 
      function m_s(data, target){
@@ -867,6 +875,7 @@
         else if (target === 'mm_s') return (1 / 0.001) * data;
         else if (target === 's_light') return (1 / 299792458) * data;
         else if (target === 's_sound') return (1 / 340.29) * data;
+        else return false;
      }
 
       function mph(data, target){
@@ -883,6 +892,7 @@
         else if (target === 'mm_s') return ((0.3048*5280)/3600 / 0.001) * data;
         else if (target === 's_light') return ((0.3048*5280)/3600 / 299792458) * data;
         else if (target === 's_sound') return ((0.3048*5280)/3600 / 340.29 ) * data;
+        else return false;
      }
 
      function mile_s(data, target){
@@ -899,6 +909,7 @@
         else if (target === 'mm_s') return ((0.3048*5280) / 0.001) * data;
         else if (target === 's_light') return ((0.3048*5280) / 299792458) * data;
         else if (target === 's_sound') return ((0.3048*5280) / 340.29 ) * data;
+        else return false;
      }
 
      function mm_s(data, target){
@@ -915,6 +926,7 @@
         else if (target === 'mile_s') return (0.001 / 0.3048*5280) * data;
         else if (target === 's_light') return (0.001 / 299792458) * data;
         else if (target === 's_sound') return (0.001 / 340.29 ) * data;
+        else return false;
      }
 
      function s_light(data, target){
@@ -931,6 +943,7 @@
         else if (target === 'mile_s') return (299792458 / 0.3048*5280) * data;
         else if (target === 'mm_s') return (299792458 / 0.001) * data;
         else if (target === 's_sound') return (299792458 / 340.29) * data;
+        else return false;
      }
 
      function s_sound(data, target){
@@ -947,6 +960,7 @@
         else if (target === 'mile_s') return (340.29 / 0.3048*5280) * data;
         else if (target === 'mm_s') return (340.29 / 0.001) * data;
         else if (target === 's_light') return (340.29 / 299792458) * data;
+        else return false;
      }
 
      convert.Speed = function(data, source, target){
