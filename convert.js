@@ -1,6 +1,6 @@
 /*!
  * convert.js 0.0.1
- * Authors: Ertuğrul Üngör, Yakup Ad , Okan Davut
+ * Authors: Ertuğrul Üngör, Yakup Ad ,Yasin Duvarcı, Okan Davut
  * Supporters: Palash Mondal 
  */
 
@@ -719,6 +719,253 @@
             else if (source === 'parsec') return parsec(data, target);
             else if (source === 'm') return m(data, target);
             else if (source === 'mile') return mile(data, target);
+            else return false;
+        }else return false;
+    };
+
+    //Convert Speed
+    function cm_s(data, target){
+        target = target.toLowerCase();
+        if (target === 'ft_s') return (0.01 / 0.03048) * data;
+        else if (target === 'inch_s') return (0.01 / (0.3048 / 12)) * data;
+        else if (target === 'km_h') return (0.01 / (1000 / 3600)) * data;
+        else if (target === 'km_s') return (0.01 / 1000) * data;
+        else if (target === 'kn') return (0.01 / (1852/3600)) * data;
+        else if (target === 'ma') return (0.01 / 340.29) * data;
+        else if (target === 'm_s') return (0.01 / 1) * data;
+        else if (target === 'mph') return (0.01 / (0.3048*5280) / 3600) * data;
+        else if (target === 'mile_s') return (0.01 / (0.3048*5280)) * data;
+        else if (target === 'mm_s') return (0.01 / 0.001) * data;
+        else if (target === 's_light') return (0.01 / 299792458) * data;
+        else if (target === 's_sound') return (0.01 / 340.29) * data;
+    }
+
+    function ft_s(data, target){
+        target = target.toLowerCase();
+        if (target === 'cm_s') return (0.03048 / 0.01) * data;
+        else if (target === 'inch_s') return (0.03048 / (0.3048/12)) * data;
+        else if (target === 'km_h') return (0.03048 / (1000/3600)) * data;
+        else if (target === 'km_s') return (0.03048 / 1000) * data;
+        else if (target === 'kn') return (0.03048 / (1852/3600)) * data;
+        else if (target === 'ma') return (0.03048 / 340.29) * data;
+        else if (target === 'm_s') return (0.03048 / 1) * data;
+        else if (target === 'mph') return (0.03048 / (0.3048*5280)/3600) * data;
+        else if (target === 'mile_s') return (0.03048 / (0.3048*5280)) *  data;
+        else if (target === 'mm_s') return (0.03048 / 0.001) * data;
+        else if (target === 's_light') return (0.03048 / 299792458) * data;
+        else if (target === 's_sound') return (0.03048 / 340.29) * data;
+     }
+
+     function inch_s(data, target){
+        target = target.toLowerCase();
+        if (target === 'cm_s') return ((0.3048/12) / 0.01) * data;
+        else if (target === 'ft_s') return ((0.3048/12) / 0.03048) * data;
+        else if (target === 'km_h') return ((0.3048/12) / (1000/3600)) * data;
+        else if (target === 'km_s') return ((0.3048/12) / 1000) * data;
+        else if (target === 'kn') return ((0.3048/12) / (1852/3600)) * data;
+        else if (target === 'ma') return ((0.3048/12) / 340.29) * data;
+        else if (target === 'm_s') return ((0.3048/12) / 1) * data;
+        else if (target === 'mph') return ((0.3048/12) / (0.3048*5280)/3600) * data;
+        else if (target === 'mile_s') return ((0.3048/12) / (0.3048*5280) ) * data;
+        else if (target === 'mm_s') return ((0.3048/12) / 0.001) * data;
+        else if (target === 's_light') return ((0.3048/12) / 299792458 ) * data;
+        else if (target === 's_sound') return ((0.3048/12) / 340.29) * data;
+     }
+
+     function km_h(data, target){
+        target = target.toLowerCase();
+        if (target === 'cm_s') return ((1000/3600) / 0.01) * data;
+        else if (target === 'ft_s') return ((1000/3600) / 0.03048) * data;
+        else if (target === 'inch_s') return ((1000/3600) / (0.3048/12)) * data;
+        else if (target === 'km_s') return ((1000/3600) / 1000) * data;
+        else if (target === 'kn') return ((1000/3600) / (1852/3600)) * data;
+        else if (target === 'ma') return ((1000/3600) / 340.29) * data;
+        else if (target === 'm_s') return ((1000/3600) / 1) * data;
+        else if (target === 'mph') return ((1000/3600) / (0.3048*5280)/3600) * data;
+        else if (target === 'mile_s') return ((1000/3600) / (0.3048*5280)) * data;
+        else if (target === 'mm_s') return ((1000/3600) / 0.001 ) * data;
+        else if (target === 's_light') return ((1000/3600) / 299792458 ) * data;
+        else if (target === 's_sound') return ((1000/3600) / 340.29) * data;
+     }
+
+     function km_s(data, target){
+        target = target.toLowerCase();
+        if (target === 'cm_s') return (1000 / 0.01) * data;
+        else if (target === 'ft_s') return (1000 / 0.03048) * data;
+        else if (target === 'inch_s') return (1000 / (0.3048/12)) * data;
+        else if (target === 'km_h') return (1000 / (1000/3600)) * data;
+        else if (target === 'kn') return (1000 / (1852/3600)) * data;
+        else if (target === 'ma') return (1000 / 340.29) * data;
+        else if (target === 'm_s') return (1000 / 1) * data;
+        else if (target === 'mph') return (1000 / (0.3048*5280)/3600) * data;
+        else if (target === 'mile_s') return (1000 / (0.3048*5280)) * data;
+        else if (target === 'mm_s') return (1000 / 0.001) * data;
+        else if (target === 's_light') return (1000 / 299792458) * data;
+        else if (target === 's_sound') return (1000 / 340.29) * data;
+     }
+
+     function ma(data, target){
+        target = target.toLowerCase();
+        if (target === 'cm_s') return ((1852/3600) / 0.01) * data;
+        else if (target === 'ft_s') return ((1852/3600) / 0.03048) * data;
+        else if (target === 'inch_s') return ((1852/3600) / (0.3048/12)) * data;
+        else if (target === 'km_h') return ((1852/3600) / (1000/3600)) * data;
+        else if (target === 'km_s') return ((1852/3600) / 1000) * data;
+        else if (target === 'ma') return ((1852/3600) / 340.29) * data;
+        else if (target === 'm_s') return ((1852/3600) / 1) * data;
+        else if (target === 'mph') return ((1852/3600) / (0.3048*5280)/3600) * data;
+        else if (target === 'mile_s') return ((1852/3600) / (0.3048*5280)) * data;
+        else if (target === 'mm_s') return ((1852/3600) / 0.001) * data;
+        else if (target === 's_light') return ((1852/3600) / 299792458) * data;
+        else if (target === 's_sound') return ((1852/3600) / 340.29) * data;
+     }
+
+     function kn(data, target){
+        target = target.toLowerCase();
+        if (target === 'cm_s') return ((1852/3600) / 0.01) * data;
+        else if (target === 'ft_s') return ((1852/3600) / 0.03048) * data;
+        else if (target === 'inch_s') return ((1852/3600) / (0.3048/12)) * data;
+        else if (target === 'km_h') return ((1852/3600) / (1000/3600)) * data;
+        else if (target === 'km_s') return ((1852/3600) / 1000) * data;
+        else if (target === 'ma') return ((1852/3600) / 340.29) * data;
+        else if (target === 'm_s') return ((1852/3600) / 1) * data;
+        else if (target === 'mph') return ((1852/3600) / (0.3048*5280)/3600) * data;
+        else if (target === 'mile_s') return ((1852/3600) / (0.3048*5280)) * data;
+        else if (target === 'mm_s') return ((1852/3600) / 0.001) * data;
+        else if (target === 's_light') return ((1852/3600) / 299792458) * data;
+        else if (target === 's_sound') return ((1852/3600) / 340.29) * data;
+     }
+
+
+     function ma(data, target){
+        target = target.toLowerCase();
+        if (target === 'cm_s') return (340.29 / 0.01) * data;
+        else if (target === 'ft_s') return ((1852/3600) / 0.03048) * data;
+        else if (target === 'inch_s') return (340.29 / (0.3048/12)) * data;
+        else if (target === 'km_h') return (340.29 / (1000/3600)) * data;
+        else if (target === 'km_s') return (340.29 / 1000) * data;
+        else if (target === 'kn') return (340.29 / (1852/3600)) * data;
+        else if (target === 'm_s') return (340.29 / 1) * data;
+        else if (target === 'mph') return (340.29 / (0.3048*5280)/3600) * data;
+        else if (target === 'mile_s') return (340.29 / (0.3048*5280)) * data;
+        else if (target === 'mm_s') return (340.29 / 0.001) * data;
+        else if (target === 's_light') return (340.29 / 299792458) * data;
+        else if (target === 's_sound') return (340.29 / 340.29) * data;
+     }
+
+     function m_s(data, target){
+        target = target.toLowerCase();
+        if (target === 'cm_s') return (1 / 0.01) * data;
+        else if (target === 'ft_s') return (1 / 0.03048)* data;
+        else if (target === 'inch_s') return (340.29 / (0.3048/12)) * data;
+        else if (target === 'km_h') return (1 / (1000/3600)) * data;
+        else if (target === 'km_s') return (1 / 1000) * data;
+        else if (target === 'kn') return (1 / (1852/3600)) * data;
+        else if (target === 'ma') return (1 / 340.29 ) * data;
+        else if (target === 'mph') return (1 / (0.3048*5280)/3600) * data;
+        else if (target === 'mile_s') return (1 / 0.3048*5280) * data;
+        else if (target === 'mm_s') return (1 / 0.001) * data;
+        else if (target === 's_light') return (1 / 299792458) * data;
+        else if (target === 's_sound') return (1 / 340.29) * data;
+     }
+
+      function mph(data, target){
+        target = target.toLowerCase();
+        if (target === 'cm_s') return ((0.3048*5280)/3600 / 0.01) * data;
+        else if (target === 'ft_s') return ((0.3048*5280)/3600 / 0.03048)* data;
+        else if (target === 'inch_s') return ((0.3048*5280)/3600 / 0.3048/12) * data;
+        else if (target === 'km_h') return ((0.3048*5280)/3600 / 1000/3600) * data;
+        else if (target === 'km_s') return ((0.3048*5280)/3600 / 1000) * data;
+        else if (target === 'kn') return ((0.3048*5280)/3600 / 1852/3600) * data;
+        else if (target === 'ma') return ((0.3048*5280)/3600 / 340.29) * data;
+        else if (target === 'm_s') return ((0.3048*5280)/3600 / 1) * data;
+        else if (target === 'mile_s') return ((0.3048*5280)/3600 / 0.3048*5280) * data;
+        else if (target === 'mm_s') return ((0.3048*5280)/3600 / 0.001) * data;
+        else if (target === 's_light') return ((0.3048*5280)/3600 / 299792458) * data;
+        else if (target === 's_sound') return ((0.3048*5280)/3600 / 340.29 ) * data;
+     }
+
+     function mile_s(data, target){
+        target = target.toLowerCase();
+        if (target === 'cm_s') return ((0.3048*5280) / 0.01) * data;
+        else if (target === 'ft_s') return ((0.3048*5280) / 0.03048)* data;
+        else if (target === 'inch_s') return ((0.3048*5280) / (0.3048/12)) * data;
+        else if (target === 'km_h') return ((0.3048*5280) / 1000/3600) * data;
+        else if (target === 'km_s') return ((0.3048*5280) / 1000) * data;
+        else if (target === 'kn') return ((0.3048*5280) / 1852/3600) * data;
+        else if (target === 'ma') return ((0.3048*5280) / 340.29) * data;
+        else if (target === 'm_s') return ((0.3048*5280) / 1) * data;
+        else if (target === 'mph') return ((0.3048*5280) / 0.3048*5280) * data;
+        else if (target === 'mm_s') return ((0.3048*5280) / 0.001) * data;
+        else if (target === 's_light') return ((0.3048*5280) / 299792458) * data;
+        else if (target === 's_sound') return ((0.3048*5280) / 340.29 ) * data;
+     }
+
+     function mm_s(data, target){
+        target = target.toLowerCase();
+        if (target === 'cm_s') return (0.001 / 0.01) * data;
+        else if (target === 'ft_s') return (0.001 / 0.03048)* data;
+        else if (target === 'inch_s') return (0.001 / 0.3048/12) * data;
+        else if (target === 'km_h') return (0.001 / 1000/3600) * data;
+        else if (target === 'km_s') return (0.001 / 1000) * data;
+        else if (target === 'kn') return (0.001 / 1852/3600) * data;
+        else if (target === 'ma') return (0.001 / 340.29) * data;
+        else if (target === 'm_s') return (0.001 / 1) * data;
+        else if (target === 'mph') return (0.001 / (0.3048*5280)/3600) * data;
+        else if (target === 'mile_s') return (0.001 / 0.3048*5280) * data;
+        else if (target === 's_light') return (0.001 / 299792458) * data;
+        else if (target === 's_sound') return (0.001 / 340.29 ) * data;
+     }
+
+     function s_light(data, target){
+        target = target.toLowerCase();
+        if (target === 'cm_s') return (299792458 / 0.01) * data;
+        else if (target === 'ft_s') return (299792458 / 0.03048)* data;
+        else if (target === 'inch_s') return (299792458 / 0.3048/12) * data;
+        else if (target === 'km_h') return (299792458 / 1000/3600) * data;
+        else if (target === 'km_s') return (299792458 / 1000) * data;
+        else if (target === 'kn') return (299792458 / 1852/3600) * data;
+        else if (target === 'ma') return (299792458 / 340.29) * data;
+        else if (target === 'm_s') return (299792458 / 1) * data;
+        else if (target === 'mph') return (299792458 / (0.3048*5280)/3600) * data;
+        else if (target === 'mile_s') return (299792458 / 0.3048*5280) * data;
+        else if (target === 'mm_s') return (299792458 / 0.001) * data;
+        else if (target === 's_sound') return (299792458 / 340.29) * data;
+     }
+
+     function s_sound(data, target){
+        target = target.toLowerCase();
+        if (target === 'cm_s') return (340.29 / 0.01) * data;
+        else if (target === 'ft_s') return (340.29 / 0.03048)* data;
+        else if (target === 'inch_s') return (340.29 / 0.3048/12) * data;
+        else if (target === 'km_h') return (340.29 / 1000/3600) * data;
+        else if (target === 'km_s') return (340.29 / 1000) * data;
+        else if (target === 'kn') return (340.29 / 1852/3600) * data;
+        else if (target === 'ma') return (340.29 / 340.29) * data;
+        else if (target === 'm_s') return (340.29 / 1) * data;
+        else if (target === 'mph') return (340.29 / (0.3048*5280)/3600) * data;
+        else if (target === 'mile_s') return (340.29 / 0.3048*5280) * data;
+        else if (target === 'mm_s') return (340.29 / 0.001) * data;
+        else if (target === 's_light') return (340.29 / 299792458) * data;
+     }
+
+     convert.Speed = function(data, source, target){
+        if(isNumber(data)){
+            if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;
+            source = source.toLowerCase();
+            if (source === 'cm_s') return cm_s(data, target);
+            else if (source === 'ft_s') return ft_s(data, target);
+            else if (source === 'inch_s') return inch_s(data, target);
+            else if (source === 'km_h') return km_h(data, target);
+            else if (source === 'km_s') return km_s(data, target);
+            else if (source === 'ma') return ma(data, target);
+            else if (source === 'kn') return kn(data, target);
+            else if (source === 'm_s') return m_s(data, target);
+            else if (source === 'mph') return mph(data, target);
+            else if (source === 'mile_s') return mile_s(data, target);
+            else if (source === 'mm_s') return mm_s(data, target);
+            else if (source === 's_light') return s_light(data, target);
+            else if (source === 's_sound') return s_sound(data, target);
             else return false;
         }else return false;
     };
