@@ -8,7 +8,7 @@ Bu döküman convert.js'i nasıl kullanacağınız ve bu kütüphaneye nasıl de
 
 ###Bower
 	bower install convert.js	
-	
+
 ----------
 
 **Yapabilecekleriniz:**
@@ -17,3 +17,4 @@ Bu döküman convert.js'i nasıl kullanacağınız ve bu kütüphaneye nasıl de
  - [Zaman ifade çevirimi](https://github.com/YazilimMuhendisiyizBiz/convert.js/blob/master/Document/tr/time.md)
  - [Veri birimi ifade çevirimi](https://github.com/YazilimMuhendisiyizBiz/convert.js/blob/master/Document/tr/dataunit.md)
  - [Enerji ifade çevirimi](https://github.com/YazilimMuhendisiyizBiz/convert.js/blob/master/Document/tr/energy.md)
+ - [Astronomik ifade çevirimi](https://github.com/YazilimMuhendisiyizBiz/convert.js/blob/master/Document/tr/astronomical.md)
