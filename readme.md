@@ -4,6 +4,13 @@ convert.js
 
 This is a simple conversion library
 
+
+----------
+###Bower Install
+	bower install convert.js
+----------
+
+
 convert.Metric(data, source, target)
 -----------------------
 
