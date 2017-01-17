@@ -983,6 +983,8 @@
             else return false;
         }else return false;
     };
+
+    //Periodic convert
     convert.Periodic = function(data){
         var elementsymbols= new Array("H","He","Li","Be","B","C","N","O","F",
             "Ne","Na","Mg","Al","Si","P","S","Cl","Ar","K","Ca","Sc","Ti","V",
@@ -995,7 +997,7 @@
             "Uuu","Uub","Uut","Uuq","Uup","Uuh","Uus","Uuo","Uue","Ubn");
         if(isNumber(data)){
             if(data>0 && data<=120) return elementsymbols[data-1];
-            else return "Please enter a value between 1 and 120!";
+            else return false;
         }else return false;
     };
      
