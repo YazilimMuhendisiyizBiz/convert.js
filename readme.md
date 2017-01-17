@@ -154,11 +154,8 @@ convert.Periodic(120);
 => "Ubn"
 
 convert.Periodic(0);
-=> "Please enter a value between 1 and 120!"
+=> false
 
 convert.Periodic("convertdotjs");
 => false
-
-convert.Periodic(convertdotjs)
-=> "ReferenceError: Can't find variable: convertdotjs"
 ```
