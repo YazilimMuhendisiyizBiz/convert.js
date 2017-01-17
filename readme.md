@@ -139,3 +139,26 @@ convert.Speed(19, "ma", "kn");
 convert.Speed("string", "ft/s", "km/s");
 => false
 ```
+
+convert.Periodic(data)
+-----------------------
+
+```javascript
+convert.Periodic(18);
+=> "Ar"
+
+convert.Periodic(10);
+=> "Ne"
+
+convert.Periodic(120);
+=> "Ubn"
+
+convert.Periodic(0);
+=> "Please enter a value between 1 and 120!"
+
+convert.Periodic("convertdotjs");
+=> false
+
+convert.Periodic(convertdotjs)
+=> "ReferenceError: Can't find variable: convertdotjs"
+```
