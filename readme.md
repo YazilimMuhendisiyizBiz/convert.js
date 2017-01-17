@@ -156,9 +156,9 @@ convert.Periodic(120);
 convert.Periodic(0);
 => "Please enter a value between 1 and 120!"
 
-convert.Periodic("lol");
+convert.Periodic("convertdotjs");
 => false
 
-convert.Periodic(lol)
-=> "ReferenceError: Can't find variable: lol"
+convert.Periodic(convertdotjs)
+=> "ReferenceError: Can't find variable: convertdotjs"
 ```
