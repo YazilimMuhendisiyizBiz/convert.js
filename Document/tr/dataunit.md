@@ -38,7 +38,7 @@ convert.DataUnits(1, "gb", "mb");
 convert.DataUnits(1, "mb", "kb");
 => 1024
 
-convert.Time(1, "pb", "gb");
+convert.DataUnits(1, "pb", "gb");
 => 1048576
 ```
 
