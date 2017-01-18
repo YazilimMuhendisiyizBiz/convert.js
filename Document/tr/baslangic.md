@@ -9,6 +9,9 @@ Bu döküman convert.js'i nasıl kullanacağınız ve bu kütüphaneye nasıl de
 ###Bower
 	bower install convert.js	
 
+###npm
+	npm install convertjs
+
 ----------
 
 **Yapabilecekleriniz:**

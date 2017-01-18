@@ -4,9 +4,15 @@ convert.js provides functionality to convert measurement units.
 
 This documentation explains how to use ConvertJS and how to contribute to the project.
 
+----------
 ##Installation
 ###Bower
-	bower install convert.js
+	bower install convert.js	
+
+###npm
+	npm install convertjs
+
+----------
 
 **Index:**
 
