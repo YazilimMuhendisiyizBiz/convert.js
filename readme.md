@@ -6,8 +6,12 @@ This is a simple conversion library
 
 
 ----------
+##Yükleme
 ###Bower Install
 	bower install convert.js
+
+###npm Install
+	npm install convertjs
 ----------
 
 
