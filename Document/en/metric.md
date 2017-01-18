@@ -7,13 +7,12 @@ convert.Metric(data, source, target)
 ----------
 
 
-
 **Parameters:**
-> Data => The Value that will converte
+> Data => Value to be converted
 
-> Source => The actual unit of value
+> Source => Current unit
 
-> Target => The unit that will be converted
+> Target => Output unit
 
 
 ----------
@@ -30,7 +29,7 @@ convert.Metric(data, source, target)
  - inch => inch
  - feet  => feet
  - yard => yard
-  
+
 ----------
 
 
@@ -46,5 +45,3 @@ convert.Metric(1, "hm", "inch");
 convert.Metric(1, "km", "mm");
 => 1000000
 ```
-
-
