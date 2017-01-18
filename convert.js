@@ -1,7 +1,7 @@
 /*!
- * convert.js 0.0.1
+ * convert.js 0.0.2
  * Authors: Ertuğrul Üngör, Yakup Ad ,Yasin Duvarcı, Okan Davut, Ahmet Fatih Eraslan
- * Supporters: Palash Mondal 
+ * Supporters: Palash Mondal, Berke Emrecan Arslan
  */
 
 ;(function(root, factory) {    
