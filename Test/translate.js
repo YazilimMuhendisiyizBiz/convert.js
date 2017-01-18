@@ -1,14 +1,14 @@
 $(function(){
-		$("#en").click(function() {
-			$("#en").hide();
-			$("#tr").show();
-			translate("en");
+		$("#tr").click(function() {
+			$(".en").hide();
+			$(".tr").show();
+			translate("tr");
 		});
 
-		$("#tr").click(function() {
-			$("#tr").hide();
-			$("#en").show();
-			translate("tr");
+		$("#en").click(function() {
+			$(".tr").hide();
+			$(".en").show();
+			translate("en");
 		});
 
 		var tr ={
@@ -41,11 +41,11 @@ $(function(){
 			"astronomical":"Astronomical",
 			"speed":"Speed",
 			"periodic":"Periodic"
-		}
+		};
 
 		function translate(lang)
 		{	
-			$("[tkey]").each (function (index)
+			$("[tkey]").each(function (index)
 			{
 				var str;
 				if(lang == "tr")
