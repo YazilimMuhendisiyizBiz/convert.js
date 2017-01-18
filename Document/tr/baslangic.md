@@ -18,3 +18,6 @@ Bu döküman convert.js'i nasıl kullanacağınız ve bu kütüphaneye nasıl de
  - [Veri birimi ifade çevirimi](https://github.com/YazilimMuhendisiyizBiz/convert.js/blob/master/Document/tr/dataunit.md)
  - [Enerji ifade çevirimi](https://github.com/YazilimMuhendisiyizBiz/convert.js/blob/master/Document/tr/energy.md)
  - [Astronomik ifade çevirimi](https://github.com/YazilimMuhendisiyizBiz/convert.js/blob/master/Document/tr/astronomical.md)
+ - [Hız ifade çevirimi](https://github.com/YazilimMuhendisiyizBiz/convert.js/blob/master/Document/tr/speed.md)
+ - [Sıcaklık ifade çevirimi](https://github.com/YazilimMuhendisiyizBiz/convert.js/blob/master/Document/tr/temperature.md)
+ - [Zaman ifade çevirimi](https://github.com/YazilimMuhendisiyizBiz/convert.js/blob/master/Document/tr/time.md)
