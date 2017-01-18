@@ -3,10 +3,161 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Convert JS - Test</title>
+	<!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--Convert.js-->
 	<script src="../convert.js"></script>
 </head>
 <body>
-	<p><em>Please have a look at the JavaScript Console</em></p>
+<!--	<p><em>Please have a look at the JavaScript Console</em></p>-->
+ <div class="jumbotron text-center">
+        <h1>Convert.js</h1>
+        <p>We are convert everything in the world</p>
+ </di>
+ <div class="container">
+<div class="row" style="background-color: #0011;">
+<center>
+<h3 id="result"></h3>
+</center>
+</div>
+        <div class="row">
+
+            <div class="col-md-12" id="metric">
+                <h3>Metric</h3>
+                <hr>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label for="cValueMetric">Value to be converted for metric </label>
+                            <input type="number" class="form-control" id="dataM" placeholder="Value">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="cValueMetricUnit">Unit</label>
+                        <select class="form-control" id="sourceMetric">
+                            <option>mm</option>
+                            <option>cm</option>
+                            <option>m</option>
+                            <option>km</option>
+                            <option>dam</option>
+                            <option>dm</option>
+                            <option>inch</option>
+                            <option>feet</option>
+                            <option>yard</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="cConvertValueMetricUnit">Unit to convert</label>
+                        <select class="form-control" id="targetMetric">
+                            <option>mm</option>
+                            <option>cm</option>
+                            <option>m</option>
+                            <option>km</option>
+                            <option>dam</option>
+                            <option>dm</option>
+                            <option>inch</option>
+                            <option>feet</option>
+                            <option>yard</option>
+                        </select><br>
+                        <button id="mecricConverter" class="btn btn-danger" style="float: right;" onclick="MetricConverter();">Converter</button>
+                    </div>
+                </div>
+            </div>
+
+              <div class="col-md-12" id="metric">
+                <h3>Time</h3>
+                <hr>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label for="cValueTime">Value to be converted for time </label>
+                            <input type="number" class="form-control" id="dataT" placeholder="Value">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="cValueTimeUnit">Time Unit</label>
+                        <select class="form-control" id="sourceTime">
+                            <option>century</option>
+                            <option>minute</option>
+                            <option>day</option>
+                            <option>week</option>
+                            <option>millisecond</option>
+                            <option>hour</option>
+                            <option>second</option>
+                            <option>year</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="cConvertValueTimeUnit">Unit to convert</label>
+                        <select class="form-control" id="targetTime">
+                            <option>century</option>
+                            <option>minute</option>
+                            <option>day</option>
+                            <option>week</option>
+                            <option>millisecond</option>
+                            <option>hour</option>
+                            <option>second</option>
+                            <option>year</option>
+                        </select><br>
+                        <button id="timeConverter" class="btn btn-danger" style="float: right;" onclick="TimeConverter();">Converter</button>
+                    </div>
+                </div>
+            </div>
+
+              <div class="col-md-12" id="metric">
+                <h3>Metric</h3>
+                <hr>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label for="cValueMetric">Value to be converted for metric </label>
+                            <input type="number" class="form-control" id="dataM" placeholder="Value">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="cValueMetricUnit">Unit</label>
+                        <select class="form-control" id="sourceMetric">
+                            <option>mm</option>
+                            <option>cm</option>
+                            <option>m</option>
+                            <option>km</option>
+                            <option>dam</option>
+                            <option>dm</option>
+                            <option>inch</option>
+                            <option>feet</option>
+                            <option>yard</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="cConvertValueMetricUnit">Unit to convert</label>
+                        <select class="form-control" id="targetMetric">
+                            <option>mm</option>
+                            <option>cm</option>
+                            <option>m</option>
+                            <option>km</option>
+                            <option>dam</option>
+                            <option>dm</option>
+                            <option>inch</option>
+                            <option>feet</option>
+                            <option>yard</option>
+                        </select><br>
+                        <button id="mecricConverter" class="btn btn-danger" style="float: right;" onclick="MetricConverter();">Converter</button>
+                    </div>
+                </div>
+            </div>
+
+
+            
+    </div>
+
 	
 	<script>
 		// This is a simple conversion library
