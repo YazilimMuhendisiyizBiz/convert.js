@@ -313,18 +313,19 @@ Supporter:Ahmet Urgancı
                 <div class="col-md-4">
                     <label for="cValueSpeed" tkey="source">Source</label>
                     <select class="form-control" id="sourceSpeed">
-                       <option>au96</option>
-                        <option>km</option>
-                        <option>lightsecond</option>
-                        <option>lightminute</option>
-                        <option>lighthour</option>
-                        <option>lightday</option>
-                        <option>lightyear_julian</option>
-                        <option>lightyear_tropical</option>
-                        <option>lightyear_traditional</option>
-                        <option>parsec</option>
-                        <option>m</option>
-                        <option>mile</option>
+                        <option>cm/s</option>
+                        <option>ft/s</option>
+                        <option>inch/s</option>
+                        <option>km/h</option>
+                        <option>km/s</option>
+                        <option>ma</option>
+                        <option>kn</option>
+                        <option>m/s</option>
+                        <option>mph</option>
+                        <option>mile/s</option>
+                        <option>mm/s</option>
+                        <option>s/light</option>
+			<option>s/sound</option>
 
                     </select>
                 </div>
@@ -333,18 +334,19 @@ Supporter:Ahmet Urgancı
                 <div class="col-md-12">
                     <label for="cConvertValueSpeed" tkey="target">Target</label>
                     <select class="form-control" id="targetSpeed">
-                        <option>au96</option>
-                        <option>km</option>
-                        <option>lightsecond</option>
-                        <option>lightminute</option>
-                        <option>lighthour</option>
-                        <option>lightday</option>
-                        <option>lightyear_julian</option>
-                        <option>lightyear_tropical</option>
-                        <option>lightyear_traditional</option>
-                        <option>parsec</option>
-                        <option>m</option>
-                        <option>mile</option>
+                        <option>cm/s</option>
+                        <option>ft/s</option>
+                        <option>inch/s</option>
+                        <option>km/h</option>
+                        <option>km/s</option>
+                        <option>ma</option>
+                        <option>kn</option>
+                        <option>m/s</option>
+                        <option>mph</option>
+                        <option>mile/s</option>
+                        <option>mm/s</option>
+                        <option>s/light</option>
+			<option>s/sound</option>
 
                     </select><br>
                     <button class="btn btn-primary" style="float: right;" onclick="SpeedConverter();" tkey="convert">Convert</button>
@@ -393,7 +395,7 @@ Supporter:Ahmet Urgancı
             };
             console.log(d);
             var result = convert.Metric(d.data,d.source,d.target);
-        alert(result);
+        alert(result+' '+d.target);
         }
 
     //Time Convert
