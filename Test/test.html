@@ -19,26 +19,54 @@ Supporter:Ahmet Urgancı
 </head>
 
 <body>
+<nav class="navbar navbar-default" style="margin-bottom:0px">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Convert JS</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <!--<ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>-->
+      <ul class="nav navbar-nav navbar-right">
+        <li id="en" style="display: none"><a href="#">English</a></li>
+        <li id="tr"><a href="#">Türkçe</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
     <div class="jumbotron text-center">
         <h1>Convert.js</h1>
-        <p>We are convert everything in the world</p>
+        <p tkey="slogan">This is a simple conversion library</p>
+        <p><!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/YazilimMuhendisiyizBiz/convert.js" data-style="mega" data-count-href="/YazilimMuhendisiyizBiz/convert.js/stargazers" data-count-api="/repos/YazilimMuhendisiyizBiz/convert.js#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star YazilimMuhendisiyizBiz/convert.js on GitHub">Star</a></p>
     </div>
 
     <div class="container">
         <div class="row">
         <!--Metric-->
             <div class="col-md-12" id="metric">
-                <h3>Metric</h3>
+                <h3 tkey="metric">Metric</h3>
                 <hr>
                 <div class="row">
                     <div class="col-md-8">
                         <div class="form-group">
-                            <label for="cValueMetric">Value to be converted for metric </label>
+                            <label for="cValueMetric" tkey="data">The value you want to convert</label>
                             <input type="number" class="form-control" id="dataM" placeholder="Value">
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <label for="cValueMetricUnit">Unit</label>
+                        <label for="cValueMetricUnit" tkey="source">Source</label>
                         <select class="form-control" id="sourceMetric">
                             <option>mm</option>
                             <option>cm</option>
@@ -54,7 +82,7 @@ Supporter:Ahmet Urgancı
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <label for="cConvertValueMetricUnit">Unit to convert</label>
+                        <label for="cConvertValueMetricUnit" tkey="target">Target</label>
                         <select class="form-control" id="targetMetric">
                             <option>mm</option>
                             <option>cm</option>
@@ -66,24 +94,24 @@ Supporter:Ahmet Urgancı
                             <option>feet</option>
                             <option>yard</option>
                         </select><br>
-                        <button id="mecricConverter" class="btn btn-primary" style="float: right;" onclick="MetricConverter();">Converter</button>
+                        <button id="mecricConverter" class="btn btn-primary" style="float: right;" onclick="MetricConverter();" tkey="convert">Convert</button>
                     </div>
                 </div>
             </div>
 
         <!--Time-->
          <div class="col-md-12" id="metric">
-            <h3>Time</h3>
+            <h3 tkey="time">Time</h3>
             <hr>
             <div class="row">
                 <div class="col-md-8">
                     <div class="form-group">
-                        <label for="cValueTime">Value to be converted for time </label>
+                        <label for="cValueTime" tkey="data">The value you want to convert</label>
                         <input type="number" class="form-control" id="dataT" placeholder="Value">
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <label for="cValueTimeUnit">Time Unit</label>
+                    <label for="cValueTimeUnit" tkey="source">Source</label>
                     <select class="form-control" id="sourceTime">
                         <option>century</option>
                         <option>minute</option>
@@ -98,7 +126,7 @@ Supporter:Ahmet Urgancı
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <label for="cConvertValueTimeUnit">Unit to convert</label>
+                    <label for="cConvertValueTimeUnit" tkey="target">Target</label>
                     <select class="form-control" id="targetTime">
                         <option>century</option>
                         <option>minute</option>
@@ -109,23 +137,23 @@ Supporter:Ahmet Urgancı
                         <option>second</option>
                         <option>year</option>
                     </select><br>
-                    <button id="timeConverter" class="btn btn-primary" style="float: right;" onclick="TimeConverter();">Converter</button>
+                    <button id="timeConverter" class="btn btn-primary" style="float: right;" onclick="TimeConverter();" tkey="convert">Convert</button>
                 </div>
             </div>
         </div>
         <!--Temperature-->
         <div class="col-md-12" id="temperature">
-            <h3>Temperature</h3>
+            <h3 tkey="temperature">Temperature</h3>
             <hr>
             <div class="row">
                 <div class="col-md-8">
                     <div class="form-group">
-                        <label for="cValueTemperature">Value to be converted for temperature </label>
+                        <label for="cValueTemperature" tkey="data">The value you want to convert</label>
                         <input type="number" class="form-control" id="dataTemperature" placeholder="Value">
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <label for="cValueTemperatureUnit">Temperature Unit</label>
+                    <label for="cValueTemperatureUnit" tkey="source">Source</label>
                     <select class="form-control" id="sourceTemperature">
                         <option>c</option>
                         <option>f</option>
@@ -136,30 +164,30 @@ Supporter:Ahmet Urgancı
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <label for="cConvertValueTemperatureUnit">Unit to convert</label>
+                    <label for="cConvertValueTemperatureUnit" tkey="target">Target</label>
                     <select class="form-control" id="targetTemperature">
                         <option>c</option>
                         <option>f</option>
                         <option>n</option>
                         <option>k</option>
                     </select><br>
-                    <button class="btn btn-primary" style="float: right;" onclick="TemperatureConverter();">Converter</button>
+                    <button class="btn btn-primary" style="float: right;" onclick="TemperatureConverter();" tkey="convert">Convert</button>
                 </div>
             </div>
     </div>
     <!--DataUnit-->
     <div class="col-md-12" id="dataunit">
-            <h3>DataUnit</h3>
+            <h3 tkey="dataunit">DataUnit</h3>
             <hr>
             <div class="row">
                 <div class="col-md-8">
                     <div class="form-group">
-                        <label for="cValueDataUnit">Value to be converted for data unit </label>
+                        <label for="cValueDataUnit" tkey="data">The value you want to convert</label>
                         <input type="number" class="form-control" id="dataDataUnit" placeholder="Value">
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <label for="cValueDataUnit">Data Unit</label>
+                    <label for="cValueDataUnit" tkey="source">Source</label>
                     <select class="form-control" id="sourceDataUnit">
                         <option>  byte</option>
                         <option>kb</option>
@@ -171,7 +199,7 @@ Supporter:Ahmet Urgancı
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <label for="cConvertValueDataUnit">Unit to convert</label>
+                    <label for="cConvertValueDataUnit" tkey="target">Target</label>
                     <select class="form-control" id="targetDataUnit">
                         <option>  byte</option>
                         <option>kb</option>
@@ -179,24 +207,24 @@ Supporter:Ahmet Urgancı
                         <option>gb</option>
                         <option>pb</option>
                     </select><br>
-                    <button class="btn btn-primary" style="float: right;" onclick="DataUnitConverter();">Converter</button>
+                    <button class="btn btn-primary" style="float: right;" onclick="DataUnitConverter();" tkey="convert">Convert</button>
                 </div>
             </div>
     </div>
         
         <!--Angle-->
         <div class="col-md-12" id="angle">
-            <h3>Angle</h3>
+            <h3 tkey="angle">Angle</h3>
             <hr>
             <div class="row">
                 <div class="col-md-8">
                     <div class="form-group">
-                        <label for="cValueAngle">Value to be converted for angle </label>
+                        <label for="cValueAngle" tkey="data">The value you want to convert</label>
                         <input type="number" class="form-control" id="dataAngle" placeholder="Value">
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <label for="cValueAngle">Data Unit</label>
+                    <label for="cValueAngle" tkey="source">Source</label>
                     <select class="form-control" id="sourceAngle">
                         <option>rad</option>
                         <option>grad</option>
@@ -207,31 +235,31 @@ Supporter:Ahmet Urgancı
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <label for="cConvertValueAngle">Unit to convert</label>
+                    <label for="cConvertValueAngle" tkey="target">Target</label>
                     <select class="form-control" id="targetAngle">
                         <option>rad</option>
                         <option>grad</option>
                         <option>minute</option>
                         <option>second</option>
                     </select><br>
-                    <button class="btn btn-primary" style="float: right;" onclick="AngleConverter();">Converter</button>
+                    <button class="btn btn-primary" style="float: right;" onclick="AngleConverter();" tkey="convert">Convert</button>
                 </div>
             </div>
         </div>
 
         <!--Astronomical-->
         <div class="col-md-12" id="astronomical">
-            <h3>Astronomical</h3>
+            <h3 tkey="astronomical">Astronomical</h3>
             <hr>
             <div class="row">
                 <div class="col-md-8">
                     <div class="form-group">
-                        <label for="cValueAstronomical">Value to be converted for astronomical </label>
+                        <label for="cValueAstronomical" tkey="data">The value you want to convert</label>
                         <input type="number" class="form-control" id="dataAstronomical" placeholder="Value">
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <label for="cValueAstronomical">Data Unit</label>
+                    <label for="cValueAstronomical" tkey="source">Source</label>
                     <select class="form-control" id="sourceAstronomical">
                        <option>au96</option>
                         <option>km</option>
@@ -251,7 +279,7 @@ Supporter:Ahmet Urgancı
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <label for="cConvertValueAstronomical">Unit to convert</label>
+                    <label for="cConvertValueAstronomical" tkey="target">Target</label>
                     <select class="form-control" id="targetAstronomical">
                         <option>au96</option>
                         <option>km</option>
@@ -267,24 +295,24 @@ Supporter:Ahmet Urgancı
                         <option>mile</option>
 
                     </select><br>
-                    <button class="btn btn-primary" style="float: right;" onclick="AstronomicalConverter();">Converter</button>
+                    <button class="btn btn-primary" style="float: right;" onclick="AstronomicalConverter();" tkey="convert">Convert</button>
                 </div>
             </div>
         </div>
 
          <!--Speed-->
         <div class="col-md-12" id="speed">
-            <h3>Speed</h3>
+            <h3 tkey="speed">Speed</h3>
             <hr>
             <div class="row">
                 <div class="col-md-8">
                     <div class="form-group">
-                        <label for="cValueSpeed">Value to be converted for speed </label>
+                        <label for="cValueSpeed" tkey="data">The value you want to convert</label>
                         <input type="number" class="form-control" id="dataSpeed" placeholder="Value">
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <label for="cValueSpeed">Data Unit</label>
+                    <label for="cValueSpeed" tkey="source">Source</label>
                     <select class="form-control" id="sourceSpeed">
                        <option>au96</option>
                         <option>km</option>
@@ -304,7 +332,7 @@ Supporter:Ahmet Urgancı
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <label for="cConvertValueSpeed">Unit to convert</label>
+                    <label for="cConvertValueSpeed" tkey="target">Target</label>
                     <select class="form-control" id="targetSpeed">
                         <option>au96</option>
                         <option>km</option>
@@ -320,22 +348,22 @@ Supporter:Ahmet Urgancı
                         <option>mile</option>
 
                     </select><br>
-                    <button class="btn btn-primary" style="float: right;" onclick="SpeedConverter();">Converter</button>
+                    <button class="btn btn-primary" style="float: right;" onclick="SpeedConverter();" tkey="convert">Convert</button>
                 </div>
             </div>
         </div>
 
         <!--Periodic-->
         <div class="col-md-12" id="periodic">
-            <h3>Periodic</h3>
+            <h3 tkey="periodic">Periodic</h3>
             <hr>
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label for="cValuePeriodic">Value to be converted for periodic </label>
+                        <label for="cValuePeriodic" tkey="data">The value you want to convert</label>
                         <input type="number" class="form-control" id="dataPeriodic" placeholder="Value">
                     </div>
-                         <button class="btn btn-primary" style="float: right;" onclick="PeriodicConverter();">Converter</button>
+                         <button class="btn btn-primary" style="float: right;" onclick="PeriodicConverter();" tkey="convert">Convert</button>
                 </div>
             </div>
         </div>
@@ -355,8 +383,8 @@ Supporter:Ahmet Urgancı
   
 </footer>
 
+<script src="translate.js"></script>
 <script type="text/javascript">
-
      //Metric Convet
      function MetricConverter() {
             var d={
@@ -506,6 +534,8 @@ Supporter:Ahmet Urgancı
 
 
     </script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 
 </html>
