@@ -21,6 +21,7 @@ convert.Periodic(veri, kaynak, hedef)
 
  Periyodik cetvelde bulunan elementler atom numaralarına göre sıralanır. Bu sayfada tüm elementler atom numaraları sembolleriyle verilmiştir.
 Elementlerin listesi:
+
 1      H  
 2      He     
 3      Li    
