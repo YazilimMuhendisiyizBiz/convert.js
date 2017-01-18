@@ -6,7 +6,6 @@ This is a simple conversion library
 
 
 ----------
-##Yükleme
 ###Bower Install
 	bower install convert.js
 
