@@ -1,6 +1,6 @@
 #Convert JS
 
-convert.js (v0.0.2), bir birimin kendi türünden başka bir birime çevrilmesi için geliştirilen bir javascript kütüphanesidir. 
+convert.js (v0.0.3), bir birimin kendi türünden başka bir birime çevrilmesi için geliştirilen bir javascript kütüphanesidir. 
 
 Bu döküman convert.js'i nasıl kullanacağınız ve bu kütüphaneye nasıl destek olabileceğiniz hakkında bilgiler içermektedir.
 
