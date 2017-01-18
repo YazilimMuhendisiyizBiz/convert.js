@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Convert JS - Test</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--Convert.js-->
+    <script src="../../convert.js"></script>
+    <style>
+        .left-menu{
+            border-right: 1px solid #ccc;
+        }
+        
+        .menu-active{
+            border-bottom: 1px solid red;
+        }
+
+        .left-menu li{
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            padding: 4px;
+            color: #000000;
+        }
+
+        .left-menu li a{
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .left-menu li a:hover{
+            text-decoration: none;
+        }
+
+        .sub-menu{
+            margin-left: -25px;
+            font-size: 12px;
+            color: #8f8f8f !important;
+            padding: 2px !important;;
+        }
+
+        .sub-menu a{
+            color: #8f8f8f !important;
+            text-decoration: none;
+        }
+
+        p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-default" style="margin-bottom:0px">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Convert JS</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      	<li class="active"><a href="#">Başlangıç</a></li>    
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../en/introduction.html">English</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <div class="jumbotron text-center" style="padding-top: 10px;padding-bottom: 10px;">
+        <h2>Convert.js</h2>
+        <p><!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/YazilimMuhendisiyizBiz/convert.js" data-style="mega" data-count-href="/YazilimMuhendisiyizBiz/convert.js/stargazers" data-count-api="/repos/YazilimMuhendisiyizBiz/convert.js#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star YazilimMuhendisiyizBiz/convert.js on GitHub">Star</a></p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-2">
+                <ul class="left-menu">
+                    <li><a href="introduction.html">Baslangıç</a></li>
+                    <li>Dönüşümler</li>
+                        <ul>
+                            <li class="sub-menu"><a href="metric.html">Metrik</a></li>
+                            <li class="sub-menu"><a href="time.html">Zaman</a></li>
+                            <li class="sub-menu"><a href="dataunit.html">Veri Birimi</a></li>
+                            <li class="sub-menu menu-active"><a href="energy.html">Enerji</a></li>
+                            <li class="sub-menu"><a href="astronomical.html">Astronomik</a></li>
+                            <li class="sub-menu"><a href="speed.html">Hız</a></li>
+                            <li class="sub-menu"><a href="temperature.html">Sıcaklık</a></li>
+                        </ul>
+                </ul>
+            </div>
+            <div class="col-xs-10">
+               <h1>Enerji ifade çevirimi</h1>
+
+                <hr>
+                    <b>Kullanım</b>
+                    <pre>convert.Energy(veri, kaynak, hedef)</pre>
+                <hr>
+
+                <b>Parametreler:</b>
+                <div class="well well-lg" style="font-size: 16px">
+                    Veri => Çevrilmesini istediğimiz değer<br>
+                    Kaynak => Değerin şu anki enerji birimi<br>
+                    Hedef => Çıktı olarak almak istediğimiz enerji birimi
+                </div>
+                <hr>
+                <b>Kaynak ve hedef türleri:</b>
+                <ul>
+                    <li>kj => Kilojoule</li>
+                    <li>j => Joule</li>
+                    <li>mj => Megajoule</li>
+                    <li>cal => Kalori</li>
+                    <li>kcal => Kilokalori</li>
+                </ul>
+                <hr>
+                <b>Örnek kullanımlar:</b>
+                <pre>
+convert.Energy(1, "j", "kj");
+=> 0.001
+
+convert.Energy(1, "kcal", "cal");
+=> 1000
+
+convert.Energy(1, "j", "cal");
+=> 0.2388458966275</pre>
+
+            </div>
+
+            
+        </div>
+    
+    <footer>
+  <hr>
+    <div class="col-lg-12">
+      <div class="col-md-8">
+        <a href="https://github.com/YazilimMuhendisiyizBiz/convert.js">Supporter and Opinion</a> | <a href="http://yazilimmuhendisiyiz.biz/">Web Site</a>    
+      </div>
+      <div class="col-md-4">
+        <span class="muted pull-right">© 2015 YazilimMuhendisiyizBiz. All rights reserved</span>
+      </div>
+    </div>
+  
+</footer>
+
+<script type="text/javascript">
+        // convert.Metric(data, source, target)
+        console.group('%c Convert Metric', 'color:green');
+        console.log('convert.Metric(1, "cm", "m"): ', convert.Metric(1, "cm", "m"));
+        console.log('convert.Metric(1, "hm", "inch"): ', convert.Metric(1, "hm", "inch"));
+        console.log('convert.Metric(1, "km", "mm"): ', convert.Metric(1, "km", "mm"));
+        console.log('convert.Metric("string", "dam", "yard"): ', convert.Metric("string", "dam", "yard"));
+        console.groupEnd('%c Convert Metric', 'color:green');
+
+        // convert.DataUnits(data, source, target)
+        console.groupCollapsed('%c Convert DataUnits', 'color:blue');
+        console.log('convert.DataUnits(1, "mb", "kb"): ', convert.DataUnits(1, "mb", "kb"));
+        console.log('convert.DataUnits(1, "byte", "tb"): ', convert.DataUnits(1, "byte", "tb"));
+        console.log('convert.DataUnits("string", "gb", "pb"): ', convert.DataUnits("string", "gb", "pb"));
+        console.groupEnd('%c Convert DataUnits', 'color:blue');
+
+        // convert.Temperature(data, source, target)
+        console.groupCollapsed('%c Convert Temperature', 'color:red');
+        console.log('convert.Temperature(1, "c", "k"): ', convert.Temperature(1, "c", "k"));
+        console.log('convert.Temperature(1, "n", "c"): ', convert.Temperature(1, "n", "c"));
+        console.log('convert.Temperature(1, "f", "n"): ', convert.Temperature(1, "f", "n"));
+        console.log('convert.Temperature("string", "k", "f"): ', convert.Temperature("string", "k", "f"));
+        console.groupEnd('%c Convert Temperature', 'color:red');
+
+        // convert.Angle(data, source, target)
+        console.groupCollapsed('%c Convert Angle', 'color:brown');
+        console.log('convert.Angle(100,"rad","second"): ', convert.Angle(100,"rad","second"));
+        console.log('convert.Angle(1009,"deg","rad"): ', convert.Angle(1009,"deg","rad"));
+        console.log('convert.Angle(1009,"grad","rad"): ', convert.Angle(1009,"grad","rad"));
+        console.log('convert.Angle("string", "second", "grad"): ', convert.Angle("string", "second", "grad"));
+        console.groupEnd('%c Convert Angle', 'color:brown');
+
+        // convert.Time(data, source, target)
+        console.groupCollapsed('%c Convert Time', 'color:gray');
+        console.log('convert.Time(1, "hour", "minute"): ', convert.Time(1, "hour", "minute"));
+        console.log('convert.Time(1, "week", "year"): ', convert.Time(1, "week", "year"));
+        console.log('convert.Time(1009,"minute","year"): ', convert.Time(10,"minute","year"));
+        console.log('convert.Time("string", "day", "century"): ', convert.Time("string", "day", "century"));
+        console.groupEnd('%c Convert Time', 'color:gray');
+
+        // convert.Astronomical(data, source, target)
+        console.groupCollapsed('%c Convert Astronomical', 'color:aqua');
+        console.log('convert.Astronomical(1, "lightSecond", "mile"): ', convert.Astronomical(1, "lightSecond", "mile"));
+        console.log('convert.Astronomical(1, "au96", "lightYear_julian"): ', convert.Astronomical(1, "au96", "lightYear_julian"));
+        console.log('convert.Astronomical(1, "km", "lightDay"): ', convert.Astronomical(1, "km", "lightDay"));
+        console.log('convert.Astronomical("string", "lightYear_traditional", "m"): ', convert.Astronomical("string", "lightYear_traditional", "m"));
+        console.groupEnd('%c Convert Astronomical', 'color:aqua');
+
+        // convert.Speed(data, source, target)
+        console.groupCollapsed('%c Convert Speed', 'color:orange');
+        console.log('convert.Speed(19,"m/s","km/s"):', convert.Speed(19,"m/s","km/s"));
+        console.log('convert.Speed(19,"s/light","km/s"): ', convert.Speed(19,"s/light","km/s"));
+        console.log('convert.Speed(19,"ft/s","km/s"): ', convert.Speed(19,"ft/s","km/s"));
+        console.log('convert.Speed(19,"ma","kn"): ', convert.Speed(19,"ma","kn"));
+        console.groupEnd('%c Convert Speed', 'color:orange');
+
+        // convert.Periodic(data)
+        console.groupCollapsed('%c Convert Periodic', 'color:pink');
+        console.log('convert.Periodic(10):', convert.Periodic(10));
+        console.log('convert.Periodic(19): ', convert.Periodic(19));
+        console.log('convert.Periodic(100): ', convert.Periodic(100));
+        console.log('convert.Periodic(76): ', convert.Periodic(76));
+        console.groupEnd('%c Convert Periodic', 'color:pink');
+
+
+
+    </script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+
+</html>
+
+
+
