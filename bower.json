@@ -1,0 +1,31 @@
+{
+  "name": "convert.js",
+  "version": "0.0.2",
+  "main": "convert.js",
+  "homepage": "https://github.com/YazilimMuhendisiyizBiz/convert.js",
+  "authors": [
+    "Ertuğrul Üngör <ertugrulungor@gmail.com>"
+  ],
+  "description": "This is a simple conversion library",
+  "keywords": [
+    "convert",
+    "units",
+    "metric",
+    "astronomical",
+    "data",
+    "temperature",
+    "angle",
+    "time",
+    "energy",
+    "speed",
+    "periodic"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

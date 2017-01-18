@@ -1,7 +1,7 @@
 /*!
- * convert.js 0.0.1
+ * convert.js 0.0.3
  * Authors: Ertuğrul Üngör, Yakup Ad ,Yasin Duvarcı, Okan Davut, Ahmet Fatih Eraslan
- * Supporters: Palash Mondal 
+ * Supporters: Palash Mondal, Berke Emrecan Arslan
  */
 
 ;(function(root, factory) {    
@@ -16,7 +16,7 @@
     }
 }(this, function() { 
     var convert = {};
-    convert.VERSION = '0.0.2';
+    convert.VERSION = '0.0.3';
 
     function isNumber(data){
         return toString.call(data) === '[object Number]';
@@ -983,6 +983,8 @@
             else return false;
         }else return false;
     };
+
+    //Periodic convert
     convert.Periodic = function(data){
         var elementsymbols= new Array("H","He","Li","Be","B","C","N","O","F",
             "Ne","Na","Mg","Al","Si","P","S","Cl","Ar","K","Ca","Sc","Ti","V",
@@ -995,7 +997,7 @@
             "Uuu","Uub","Uut","Uuq","Uup","Uuh","Uus","Uuo","Uue","Ubn");
         if(isNumber(data)){
             if(data>0 && data<=120) return elementsymbols[data-1];
-            else return "Please enter a value between 1 and 120!";
+            else return false;
         }else return false;
     };
      

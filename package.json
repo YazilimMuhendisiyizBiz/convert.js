@@ -1,0 +1,32 @@
+{
+  "name": "convertjs",
+  "version": "0.0.3",
+  "description": "This is a simple conversion library",
+  "main": "convert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YazilimMuhendisiyizBiz/convert.js.git"
+  },
+  "keywords": [
+    "convert",
+    "units",
+    "metric",
+    "astronomical",
+    "data",
+    "temperature",
+    "angle",
+    "time",
+    "energy",
+    "speed",
+    "periodic"
+  ],
+  "author": "Ertuğrul Üngör <ertugrulungor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YazilimMuhendisiyizBiz/convert.js/issues"
+  },
+  "homepage": "https://github.com/YazilimMuhendisiyizBiz/convert.js#readme"
+}

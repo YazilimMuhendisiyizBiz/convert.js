@@ -1,8 +1,19 @@
 convert.js
 =====
-![version badge](https://img.shields.io/badge/version-0.0.2-green.svg) [![GitHub issues](https://img.shields.io/github/issues/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/issues) [![GitHub forks](https://img.shields.io/github/forks/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/network) [![GitHub stars](https://img.shields.io/github/stars/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/stargazers) 
+![version badge](https://img.shields.io/badge/version-0.0.3-green.svg) [![GitHub issues](https://img.shields.io/github/issues/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/issues) [![GitHub forks](https://img.shields.io/github/forks/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/network) [![GitHub stars](https://img.shields.io/github/stars/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/stargazers) 
 
 This is a simple conversion library
+
+
+----------
+##Yükleme
+###Bower Install
+	bower install convert.js
+
+###npm Install
+	npm install convertjs
+----------
+
 
 convert.Metric(data, source, target)
 -----------------------
@@ -154,11 +165,8 @@ convert.Periodic(120);
 => "Ubn"
 
 convert.Periodic(0);
-=> "Please enter a value between 1 and 120!"
+=> false
 
 convert.Periodic("convertdotjs");
 => false
-
-convert.Periodic(convertdotjs)
-=> "ReferenceError: Can't find variable: convertdotjs"
 ```
