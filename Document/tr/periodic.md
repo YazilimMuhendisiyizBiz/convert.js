@@ -2,18 +2,13 @@
 
 **Kullanım:**
 ```javascript
-convert.Periodic(veri, kaynak, hedef)
+convert.Periodic(veri)
 ```
 ----------
 
 
 **Parametreler:**
-> Veri => Çevrilmesini istediğimiz değer
-
-> Kaynak => Değerin şu anki astronomik birim
-
-> Hedef => Çıktı olarak almak istediğimiz astronomik birim
-
+> Veri => Çevrilmesini istediğimiz atom numarası
 
 ----------
 
