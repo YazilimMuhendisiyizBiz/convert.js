@@ -22,7 +22,7 @@ convert.Speed(data, source, target)
 
  - cm/s    => Centimeter/Second
  - ft/s      => Feet / Second
- - inch/s  => Inç / Second
+ - inch/s  => Inch / Second
  - km/h   => Kilometer / Hour
  - km/s   => Kilometer / Second
  - ma   => Mach Number

@@ -1,8 +1,8 @@
 convert.js
 =====
-![version badge](https://img.shields.io/badge/version-0.0.3-green.svg) [![GitHub issues](https://img.shields.io/github/issues/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/issues) [![GitHub forks](https://img.shields.io/github/forks/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/network) [![GitHub stars](https://img.shields.io/github/stars/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/stargazers) 
+![version badge](https://img.shields.io/badge/version-0.0.3-green.svg) [![GitHub issues](https://img.shields.io/github/issues/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/issues) [![GitHub forks](https://img.shields.io/github/forks/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/network) [![GitHub stars](https://img.shields.io/github/stars/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/stargazers) [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/Convert-js/)
 
-This is a simple conversion library
+This is a simple conversion library -  https://yazilimmuhendisiyizbiz.github.io/convert-js-website/
 
 
 ----------
@@ -167,5 +167,22 @@ convert.Periodic(0);
 => false
 
 convert.Periodic("convertdotjs");
+=> false
+```
+
+convert.Ampere(data, source, target)
+-----------------------
+
+```javascript
+convert.Ampere(1, "ampere", "mA");
+=> 0.0001
+
+convert.Ampere(1, "kiloA", "megaA");
+=> 
+
+convert.Ampere(1, "nanoA", "gigaA");
+=> 1e-18
+
+convert.Ampere("string", "mikroA", "ampere");
 => false
 ```
