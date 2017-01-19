@@ -169,3 +169,20 @@ convert.Periodic(0);
 convert.Periodic("convertdotjs");
 => false
 ```
+
+convert.Ampere(data, source, target)
+-----------------------
+
+```javascript
+convert.Ampere(1, "ampere", "mA");
+=> "Ar"
+
+convert.Ampere(1, "kiloA", "megaA");
+=> "Ne"
+
+convert.Ampere(1, "nanoA", "gigaA");
+=> "Ubn"
+
+convert.Ampere("string", "mikroA", "ampere");
+=> false
+```
