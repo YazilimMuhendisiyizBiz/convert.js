@@ -4,8 +4,7 @@
  * Supporters: Palash Mondal, Berke Emrecan Arslan,Ahmet Urgancı
  */
 
-;
-(function(root, factory) {
+;(function(root, factory) {
     if (typeof define === 'function' && define.amd) {
         define(function() {
             return (root.convert = factory());
@@ -184,6 +183,7 @@
         if (isNumber(data)) {
             if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;
             source = source.toLowerCase();
+		if(source===target) return data;
             if (source === 'cm') return cm(data, target);
             else if (source === 'km') return km(data, target);
             else if (source === 'hm') return hm(data, target);
@@ -261,6 +261,7 @@
         if (isNumber(data)) {
             if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;
             source = source.toLowerCase();
+		if(source===target) return data;
             if (source === 'byte') return byte(data, target);
             else if (source === 'kb') return kb(data, target);
             else if (source === 'mb') return mb(data, target);
@@ -307,7 +308,9 @@
         if (isNumber(data)) {
             if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;
             source = source.toLowerCase();
-            if (source === 'c') return c(data, target);
+          
+		if(source===target) return data;
+    	    if (source === 'c') return c(data, target);
             else if (source === 'k') return k(data, target);
             else if (source === 'f') return f(data, target);
             else if (source === 'n') return n(data, target);
@@ -386,11 +389,13 @@
         if (isNumber(data)) {
             if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;
             source = source.toLowerCase();
-            if (source === 'deg') return deg(data, target);
-            else if (source === 'rad') return rad(data, target);
-            else if (source === 'grad') return second(data, target);
-            else if (source === 'minute') return minute(data, target);
-            else if (source === 'second') return second(data, target);
+
+		if(source===target) return data;
+            if(source === 'deg') return deg(data, target);
+            else if(source === 'rad') return  rad(data, target);
+            else if(source === 'grad') return  second(data, target);
+            else if(source === 'minute') return  minute(data, target);
+            else if(source === 'second') return  second(data, target);
             else return false;
         } else return false;
     };
@@ -472,6 +477,7 @@
         if (isNumber(data)) {
             if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;
             source = source.toLowerCase();
+		if(source===target) return data;
             if (source === 'century') return century(data, target);
             else if (source === 'minute') return minute(data, target);
             else if (source === 'day') return day(data, target);
@@ -534,6 +540,7 @@
         if (isNumber(data)) {
             if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;
             source = source.toLowerCase();
+		if(source===target) return data;
             if (source === 'kj') return kilojoule(data, target);
             else if (source === 'j') return joule(data, target);
             else if (source === 'mj') return megajoule(data, target);
@@ -708,6 +715,7 @@
         if (isNumber(data)) {
             if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;
             source = source.toLowerCase();
+		if(source===target) return data;
             if (source === 'au96') return au96(data, target);
             else if (source === 'km') return km(data, target);
             else if (source === 'lightsecond') return lightSecond(data, target);
@@ -964,8 +972,9 @@
         else return false;
     }
 
-    convert.Speed = function(data, source, target) {
-        if (isNumber(data)) {
+     convert.Speed = function(data, source, target){
+        if(isNumber(data)){
+		if(source===target) return data;
             if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;
             source = source.toLowerCase();
             if (source === 'cm/s') return cm_s(data, target);
