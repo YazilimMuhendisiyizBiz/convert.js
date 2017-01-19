@@ -1074,7 +1074,7 @@
 
 
 
-    convert.Ampere = function(data, sound, target) {
+    convert.Ampere = function(data, source, target) {
         if (isNumber(data)) {
             if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;
             source = source.toLowerCase();
