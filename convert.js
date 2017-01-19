@@ -1089,7 +1089,7 @@
             if (source == 'ampere') return ampere(data, target);
             else if (source == 'nanoA') return nanoA(data, target);
             else if (source == 'mikroA') return mikroA(data, target);
-            else if (source == 'mA') return nanoA(data, target);
+            else if (source == 'mA') return mA(data, target);
             else if (source == 'megaA') return megaA(data, target);
             else if (source == 'gigaA') return gigaA(data, target);
             else if (source == 'kiloA') return kiloA(data, target);
