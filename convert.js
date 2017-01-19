@@ -1020,62 +1020,62 @@
 
     function ampere(data, target) {
         target = target.toLowerCase();
-        if (source == 'nanoA') return 0, 0000000001 * data;
-        else if (source == 'mikroA') return 0, 0000001 * data;
-        else if (source == 'mA') return 0, 0001 * data;
-        else if (source == 'megaA') return 1.0E-6 * data;
-        else if (source == 'gigaA') return 1.0E-9 * data;
-        else if (source == 'kiloA') return 0.001 * data;
+        if (target == 'nanoA') return 0, 0000000001 * data;
+        else if (target == 'mikroA') return 0, 0000001 * data;
+        else if (target == 'mA') return 0, 0001 * data;
+        else if (target == 'megaA') return 1.0E-6 * data;
+        else if (target == 'gigaA') return 1.0E-9 * data;
+        else if (target == 'kiloA') return 0.001 * data;
         else return false;
     }
 
     function mA(data, target) {
         target = target.toLowerCase();
-        if (source == 'ampere') return 0.001 * data;
-        else if (source == 'nanoA') return 1000000 * data;
-        else if (source == 'mikroA') return 1000 * data;
-        else if (source == 'megaA') return 1.0E-9 * data;
-        else if (source == 'gigaA') return 1.0E-12 * data;
-        else if (source == 'kiloA') return 1.0E-6 * data;
+        if (target == 'ampere') return 0.001 * data;
+        else if (target == 'nanoA') return 1000000 * data;
+        else if (target == 'mikroA') return 1000 * data;
+        else if (target == 'megaA') return 1.0E-9 * data;
+        else if (target == 'gigaA') return 1.0E-12 * data;
+        else if (target == 'kiloA') return 1.0E-6 * data;
         else return false;
     }
 
     function nanoA(data, target) {
-        if (source == 'ampere') return 1.0E-9 * data;
-        else if (source == 'mA') return 1.0E-6 * data;
-        else if (source == 'mikroA') return 0.001 * data;
-        else if (source == 'megaA') return 1.0E-15 * data;
-        else if (source == 'gigaA') return 1.0E-18 * data;
-        else if (source == 'kiloA') return 1.0E-12 * data;
+        if (target == 'ampere') return 1.0E-9 * data;
+        else if (target == 'mA') return 1.0E-6 * data;
+        else if (target == 'mikroA') return 0.001 * data;
+        else if (target == 'megaA') return 1.0E-15 * data;
+        else if (target == 'gigaA') return 1.0E-18 * data;
+        else if (target == 'kiloA') return 1.0E-12 * data;
     }
 
     function mikroA(data, target) {
-        if (source == 'ampere') return 1.0E-6 * data;
-        else if (source == 'mA') return 0.001 * data;
-        else if (source == 'nanoA') return 1000 * data;
-        else if (source == 'megaA') return 1.0E-12 * data;
-        else if (source == 'gigaA') return 1.0E-15 * data;
-        else if (source == 'kiloA') return 1.0E-9 * data;
+        if (target == 'ampere') return 1.0E-6 * data;
+        else if (target == 'mA') return 0.001 * data;
+        else if (target == 'nanoA') return 1000 * data;
+        else if (target == 'megaA') return 1.0E-12 * data;
+        else if (target == 'gigaA') return 1.0E-15 * data;
+        else if (target == 'kiloA') return 1.0E-9 * data;
     }
 
 
     function gigaA(data, target) {
-        if (source == 'ampere') return 1000000000 * data;
-        else if (source == 'mA') return 1.0E+12 * data;
-        else if (source == 'nanoA') return 1.0E+18 * data;
-        else if (source == 'mikroA') return 1.0E+15 * data;
-        else if (source == 'megaA') return 1000 * data;
-        else if (source == 'kiloA') return 1000000 * data;
+        if (target == 'ampere') return 1000000000 * data;
+        else if (target == 'mA') return 1.0E+12 * data;
+        else if (target == 'nanoA') return 1.0E+18 * data;
+        else if (target == 'mikroA') return 1.0E+15 * data;
+        else if (target == 'megaA') return 1000 * data;
+        else if (target == 'kiloA') return 1000000 * data;
 
     }
 
     function megaA(data, target) {
-        if (source == 'ampere') return 1000000 * data;
-        else if (source == 'mA') return 1000000 * data;
-        else if (source == 'nanoA') return 1.0E+15 * data;
-        else if (source == 'mikroA') return 1.0E+12 * data;
-        else if (source == 'gigaA') return 0.001 * data;
-        else if (source == 'kiloA') return 1000 * data;
+        if (target == 'ampere') return 1000000 * data;
+        else if (target == 'mA') return 1000000 * data;
+        else if (target == 'nanoA') return 1.0E+15 * data;
+        else if (target == 'mikroA') return 1.0E+12 * data;
+        else if (target == 'gigaA') return 0.001 * data;
+        else if (target == 'kiloA') return 1000 * data;
     }
 
 
