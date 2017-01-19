@@ -1017,65 +1017,73 @@
         } else return false;
     };
 
-
+    //Ampere convert
     function ampere(data, target) {
         target = target.toLowerCase();
-        if (source == 'nanoA') return 0, 0000000001 * data;
-        else if (source == 'mikroA') return 0, 0000001 * data;
-        else if (source == 'mA') return 0, 0001 * data;
-        else if (source == 'megaA') return 1.0E-6 * data;
-        else if (source == 'gigaA') return 1.0E-9 * data;
-        else if (source == 'kiloA') return 0.001 * data;
+        if (target === 'nanoa') return 0.0000000001 * data;
+        else if (target === 'mikroa') return 0.0000001 * data;
+        else if (target === 'ma') return 0.0001 * data;
+        else if (target === 'megaa') return 1.0E-6 * data;
+        else if (target === 'gigaa') return 1.0E-9 * data;
+        else if (target === 'kiloa') return 0.001 * data;
         else return false;
     }
 
     function mA(data, target) {
         target = target.toLowerCase();
-        if (source == 'ampere') return 0.001 * data;
-        else if (source == 'nanoA') return 1000000 * data;
-        else if (source == 'mikroA') return 1000 * data;
-        else if (source == 'megaA') return 1.0E-9 * data;
-        else if (source == 'gigaA') return 1.0E-12 * data;
-        else if (source == 'kiloA') return 1.0E-6 * data;
+        if (target === 'ampere') return 0.001 * data;
+        else if (target === 'nanoa') return 1000000 * data;
+        else if (target === 'mikroa') return 1000 * data;
+        else if (target === 'megaa') return 1.0E-9 * data;
+        else if (target === 'gigaa') return 1.0E-12 * data;
+        else if (target === 'kiloa') return 1.0E-6 * data;
         else return false;
     }
 
     function nanoA(data, target) {
-        if (source == 'ampere') return 1.0E-9 * data;
-        else if (source == 'mA') return 1.0E-6 * data;
-        else if (source == 'mikroA') return 0.001 * data;
-        else if (source == 'megaA') return 1.0E-15 * data;
-        else if (source == 'gigaA') return 1.0E-18 * data;
-        else if (source == 'kiloA') return 1.0E-12 * data;
+        target = target.toLowerCase();
+        if (target === 'ampere') return 1.0E-9 * data;
+        else if (target === 'ma') return 1.0E-6 * data;
+        else if (target === 'mikroa') return 0.001 * data;
+        else if (target === 'megaa') return 1.0E-15 * data;
+        else if (target === 'gigaa') return 1.0E-18 * data;
+        else if (target === 'kiloa') return 1.0E-12 * data;
+        else return false;
     }
 
     function mikroA(data, target) {
-        if (source == 'ampere') return 1.0E-6 * data;
-        else if (source == 'mA') return 0.001 * data;
-        else if (source == 'nanoA') return 1000 * data;
-        else if (source == 'megaA') return 1.0E-12 * data;
-        else if (source == 'gigaA') return 1.0E-15 * data;
-        else if (source == 'kiloA') return 1.0E-9 * data;
+        target = target.toLowerCase();
+        if (target == 'ampere') return 1.0E-6 * data;
+        else if (target === 'ma') return 0.001 * data;
+        else if (target === 'nanoa') return 1000 * data;
+        else if (target === 'megaa') return 1.0E-12 * data;
+        else if (target === 'gigaa') return 1.0E-15 * data;
+        else if (target === 'kiloa') return 1.0E-9 * data;
+        else return false;
     }
 
 
     function gigaA(data, target) {
-        if (source == 'ampere') return 1000000000 * data;
-        else if (source == 'mA') return 1.0E+12 * data;
-        else if (source == 'nanoA') return 1.0E+18 * data;
-        else if (source == 'mikroA') return 1.0E+15 * data;
-        else if (source == 'megaA') return 1000 * data;
-        else if (source == 'kiloA') return 1000000 * data;
+        target = target.toLowerCase();
+        if (target === 'ampere') return 1000000000 * data;
+        else if (target === 'ma') return 1.0E+12 * data;
+        else if (target === 'nanoa') return 1.0E+18 * data;
+        else if (target === 'mikroa') return 1.0E+15 * data;
+        else if (target === 'megaa') return 1000 * data;
+        else if (target === 'kiloa') return 1000000 * data;
+        else return false;
 
     }
 
     function megaA(data, target) {
-        if (source == 'ampere') return 1000000 * data;
-        else if (source == 'mA') return 1000000 * data;
-        else if (source == 'nanoA') return 1.0E+15 * data;
-        else if (source == 'mikroA') return 1.0E+12 * data;
-        else if (source == 'gigaA') return 0.001 * data;
-        else if (source == 'kiloA') return 1000 * data;
+        target = target.toLowerCase();
+        if (target === 'ampere') return 1000000 * data;
+        else if (target === 'ma') return 1000000 * data;
+        else if (target === 'nanoa') return 1.0E+15 * data;
+        else if (target === 'mikroa') return 1.0E+12 * data;
+        else if (target === 'gigaa') return 0.001 * data;
+        else if (target === 'kiloa') return 1000 * data;
+        else return false;
     }
 
 
@@ -1086,17 +1094,15 @@
             source = source.toLowerCase();
             target = target.toLowerCase();
             if(source===target) return data;
-            if (source == 'ampere') return ampere(data, target);
-            else if (source == 'nanoA') return nanoA(data, target);
-            else if (source == 'mikroA') return mikroA(data, target);
-            else if (source == 'mA') return mA(data, target);
-            else if (source == 'megaA') return megaA(data, target);
-            else if (source == 'gigaA') return gigaA(data, target);
-            else if (source == 'kiloA') return kiloA(data, target);
+            if (source === 'ampere') return ampere(data, target);
+            else if (source === 'nanoa') return nanoA(data, target);
+            else if (source === 'mikroa') return mikroA(data, target);
+            else if (source === 'ma') return mA(data, target);
+            else if (source === 'megaa') return megaA(data, target);
+            else if (source === 'gigaa') return gigaA(data, target);
+            else if (source === 'kiloa') return kiloA(data, target);
             else return false;
         } else return false;
-
-
     };
 
     return convert;
