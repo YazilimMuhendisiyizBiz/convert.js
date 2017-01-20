@@ -1,6 +1,6 @@
 /*!
  * convert.js 0.0.3
- * Authors: Ertuğrul Üngör, Yakup Ad ,Yasin Duvarcı, Okan Davut, Ahmet Fatih Eraslan
+ * Authors: Ertuğrul Üngör, Yakup Ad ,Yasin Duvarcı, Okan Davut, Ahmet Fatih Eraslan, Oğuzhan Yılmaz
  * Supporters: Palash Mondal, Berke Emrecan Arslan, Ahmet Urgancı
  */
 
