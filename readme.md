@@ -1,6 +1,6 @@
 convert.js
 =====
-![version badge](https://img.shields.io/badge/version-0.0.3-green.svg) [![GitHub issues](https://img.shields.io/github/issues/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/issues) [![GitHub forks](https://img.shields.io/github/forks/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/network) [![GitHub stars](https://img.shields.io/github/stars/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/stargazers) 
+![version badge](https://img.shields.io/badge/version-0.0.3-green.svg) [![GitHub issues](https://img.shields.io/github/issues/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/issues) [![GitHub forks](https://img.shields.io/github/forks/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/network) [![GitHub stars](https://img.shields.io/github/stars/YazilimMuhendisiyizBiz/convert.js.svg)](https://github.com/YazilimMuhendisiyizBiz/convert.js/stargazers) [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/Convert-js/)
 
 This is a simple conversion library -  https://yazilimmuhendisiyizbiz.github.io/convert-js-website/
 
