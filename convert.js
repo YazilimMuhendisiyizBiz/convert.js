@@ -1104,8 +1104,8 @@
     };
 
     //Convert Multiple Lines to Javascript Array
-	convert.MultiLinetoJSArray=function(data){
-		  var lines = data.split(/\n/);
+	convert.ObjectToArray=function(data, divider){
+		  var lines = data.split(divider);
 		  var output = [];
 		  var outputText = [];
 		  for (var i = 0; i < lines.length; i++) {

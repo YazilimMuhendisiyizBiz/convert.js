@@ -187,15 +187,19 @@ convert.Ampere("string", "mikroA", "ampere");
 => false
 ```
 
-convert.MultiLinetoJSArray(data)
+convert.MultiLinetoJSArray(data, divider)
 -----------------------
 
 ```javascript
-convert.MultiLinetoJSArray("merhaba dünya \n hello \n world");
-=> ["merhaba dünya", "hello", "world"] 
+convert.MultiLinetoJSArray("hello\nworld","\n");
+=> ["hello", "world"] 
 
-convert.MultiLinetoJSArray(xxxx);
-=> ReferenceError: Can't find variable
+convert.MultiLinetoJSArray("hello, world",",");
+=> ["hello", "world"] 
+
+convert.MultiLinetoJSArray("hello","");
+=> ["h", "e", "l", "l", "o"] 
+
 ```
 
 
