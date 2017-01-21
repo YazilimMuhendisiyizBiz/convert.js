@@ -1086,8 +1086,6 @@
         else return false;
     }
 
-
-
     convert.Ampere = function(data, source, target) {
         if (isNumber(data)) {
             if (!source || !target || !isStringVariable(source) || !isStringVariable(target)) return false;
@@ -1104,6 +1102,22 @@
             else return false;
         } else return false;
     };
+
+    //Convert Multiple Lines to Javascript Array
+	convert.MultiLinetoJSArray=function(data){
+		  var lines = data.split(/\n/);
+		  var output = [];
+		  var outputText = [];
+		  for (var i = 0; i < lines.length; i++) {
+		    // only push this line if it contains a non whitespace character.
+		    if (/\S/.test(lines[i])) {
+		      outputText.push('"' + $.trim(lines[i]) + '"');
+		      output.push($.trim(lines[i]));
+		    }
+		  }
+		  //var jsarray = '[' + outputText + ']';
+		  return output;
+	}
 
     return convert;
 }));
