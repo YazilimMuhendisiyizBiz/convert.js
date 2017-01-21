@@ -191,13 +191,13 @@ convert.ObjectToArray(data, divider)
 -----------------------
 
 ```javascript
-convert.ObjectToArray("hello\nworld","\n");
+convert.ObjectToArray("hello\nworld", "\n");
 => ["hello", "world"] 
 
-convert.ObjectToArray("hello, world",",");
+convert.ObjectToArray("hello, world", ",");
 => ["hello", "world"] 
 
-convert.ObjectToArray("hello","");
+convert.ObjectToArray("hello", "");
 => ["h", "e", "l", "l", "o"] 
 
 ```
