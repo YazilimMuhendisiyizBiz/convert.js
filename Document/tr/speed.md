@@ -42,12 +42,12 @@ convert.Speed(veri, kaynak, hedef)
 
 ```javascript
 convert.Speed(1, "cm/s", "km/s");
-=> 0,00001
+=> 0.00001
 
 convert.Speed(1, "ft/s", "cm/s");
-=> 3,048
+=> 3.048
 
 convert.Speed(1, "inch_s", "cm/s");
-=>  2,54
+=>  2.54
 ```
 
