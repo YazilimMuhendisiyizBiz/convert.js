@@ -186,3 +186,17 @@ convert.Ampere(1, "nanoA", "gigaA");
 convert.Ampere("string", "mikroA", "ampere");
 => false
 ```
+
+convert.MultiLinetoJSArray(data)
+-----------------------
+
+```javascript
+convert.MultiLinetoJSArray("merhaba dünya \n hello \n world");
+=> ["merhaba dünya", "hello", "world"] 
+
+convert.MultiLinetoJSArray(xxxx);
+=> ReferenceError: Can't find variable
+```
+
+
+
