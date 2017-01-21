@@ -187,17 +187,17 @@ convert.Ampere("string", "mikroA", "ampere");
 => false
 ```
 
-convert.MultiLinetoJSArray(data, divider)
+convert.ObjectToArray(data, divider)
 -----------------------
 
 ```javascript
-convert.MultiLinetoJSArray("hello\nworld","\n");
+convert.ObjectToArray("hello\nworld","\n");
 => ["hello", "world"] 
 
-convert.MultiLinetoJSArray("hello, world",",");
+convert.ObjectToArray("hello, world",",");
 => ["hello", "world"] 
 
-convert.MultiLinetoJSArray("hello","");
+convert.ObjectToArray("hello","");
 => ["h", "e", "l", "l", "o"] 
 
 ```
