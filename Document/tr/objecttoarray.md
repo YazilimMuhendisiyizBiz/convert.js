@@ -1,13 +1,13 @@
 #Birden çok satırı Javascript Array'a Dönüştür
 
-**Usage:**
+**Kullanım:**
 ```javascript
 convert.ObjectToArray(Veri, Ayırıcı)
 ```
 ----------
 
 
-**Parameters:**
+**Parametreler:**
 > Veri => Çevrilecek veri
 
 > Divider => Ayırıcı karakter
@@ -24,7 +24,7 @@ convert.ObjectToArray(Veri, Ayırıcı)
 
 ----------
 
-**Examples:**
+**Örnekler:**
 
 ```javascript
 convert.ObjectToArray("merhaba\ndünya", "\n");
