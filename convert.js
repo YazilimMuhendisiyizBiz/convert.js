@@ -1111,8 +1111,8 @@
 		  for (var i = 0; i < lines.length; i++) {
 		    // only push this line if it contains a non whitespace character.
 		    if (/\S/.test(lines[i])) {
-		      outputText.push('"' + $.trim(lines[i]) + '"');
-		      output.push($.trim(lines[i]));
+		      outputText.push('"' + lines[i].trim() + '"');
+		      output.push(lines[i].trim());
 		    }
 		  }
 		  //var jsarray = '[' + outputText + ']';
