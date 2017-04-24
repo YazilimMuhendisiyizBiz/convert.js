@@ -6,10 +6,10 @@ This is a simple conversion library -  https://yazilimmuhendisiyizbiz.github.io/
 
 
 ----------
-###Bower Install
+### Bower Install
 	bower install convert.js
 
-###npm Install
+### npm Install
 	npm install convertjs
 ----------
 
