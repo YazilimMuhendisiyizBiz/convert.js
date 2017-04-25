@@ -202,5 +202,26 @@ convert.ObjectToArray("hello", "");
 
 ```
 
+convert.JsontoXML(obj)
+-----------------------
+
+```javascript
+data =   {
+  "kutuphane": {
+    "kitap": [
+      " Kitap 1",
+      " Kitap 2"
+    ]
+  }
+}
+	 
+convert.JsontoXML(data);
+=><kutuphane>
+	<kitap> Kitap 1</kitap>
+	<kitap> Kitap 2</kitap>
+  </kutuphane>
+
+```
+
 
 
