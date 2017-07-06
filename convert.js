@@ -1105,9 +1105,11 @@
 
     //Convert Multiple Lines to Javascript Array
 	convert.ObjectToArray = function(data, divider){
-		  var lines = data.split(divider);
+		  
 		  var output = [];
 		  var outputText = [];
+		  if (!data) return output;
+		  var lines = data.split(divider);
 		  for (var i = 0; i < lines.length; i++) {
 		    // only push this line if it contains a non whitespace character.
 		    if (/\S/.test(lines[i])) {
